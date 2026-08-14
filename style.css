@@ -1,0 +1,78 @@
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    margin: 0;
+    padding: 30px;
+}
+
+.chatbot-container
+{
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.instructions
+{
+    text-align: center;
+}
+
+.conversation
+{
+    min-height: 300px;
+    max-height: 450px;
+    overflow-y: auto;
+    border: 1px solid #aaaaaa;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.bot-message
+{
+    white-space: pre-wrap;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 0 0 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+.user-message
+{
+    white-space: pre-wrap;
+    line-height: 1.5;
+    background-color: #dceeff;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0 10px auto;
+    max-width: 80%;
+}
+
+.input-area
+{
+    display: flex;
+    gap: 10px;
+}
+
+#question
+{
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#askButton
+{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
