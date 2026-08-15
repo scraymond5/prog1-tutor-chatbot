@@ -1,21 +1,23 @@
-// Get references to the HTML elements.
+// ------------------------------------------------------------
+// C++ TUTOR CHATBOT
+// ------------------------------------------------------------
+
+// Get page elements
 const questionBox = document.getElementById("question");
 const askButton = document.getElementById("askButton");
-const conversation = document.getElementById("conversation");
-
-// Stores the topic when the chatbot is waiting for a yes/no response.
-let pendingExampleTopic = null;
-
-// Stores topics when one keyword matches multiple topics.
-let pendingTopicMatches = null;
-
-// Stores whether the user requested examples, syntax, or related topics
-// before the chatbot asked them to choose a topic.
-let pendingTopicRequest = null;
+const chatBox = document.getElementById("chatBox");
 
 
 // ------------------------------------------------------------
-// C++ CHATBOT KNOWLEDGE BASE
+// CONVERSATION STATE
+// ------------------------------------------------------------
+
+let pendingExampleTopic = null;
+let pendingClarification = null;
+
+
+// ------------------------------------------------------------
+// KNOWLEDGE BASE
 // ------------------------------------------------------------
 
 let topics = [];
@@ -33,311 +35,305 @@ async function loadKnowledgeBase()
 
         if (!response.ok)
         {
-            throw new Error("Could not load knowledge base.");
+            throw new Error(
+                "Unable to load knowledge.json. HTTP status: " +
+                response.status
+            );
         }
 
         topics = await response.json();
 
-        console.log("Knowledge base loaded.");
+        questionBox.disabled = false;
+        askButton.disabled = false;
+        questionBox.focus();
+
+        console.log(
+            "Knowledge base loaded: " +
+            topics.length +
+            " topics."
+        );
     }
     catch (error)
     {
         console.error("Error loading knowledge base:", error);
+
+        displayMessage(
+            "The chatbot knowledge base could not be loaded. " +
+            "Make sure knowledge.json is in the same folder as this JavaScript file " +
+            "and that the website is being run through a web server.",
+            "bot-message"
+        );
     }
 }
 
+
+// Prevent questions from being submitted before the JSON file is ready.
+questionBox.disabled = true;
+askButton.disabled = true;
+
 loadKnowledgeBase();
-
-
-// ------------------------------------------------------------
-// REQUEST KEYWORDS
-// ------------------------------------------------------------
-
-const exampleKeywords =
-[
-    "example",
-    "examples",
-    "sample",
-    "show me",
-    "demonstrate"
-];
-
-const syntaxKeywords =
-[
-    "syntax",
-    "show syntax",
-    "show me the syntax",
-    "what is the syntax",
-    "syntax for",
-    "how do i declare",
-    "how to declare"
-];
-
-const relatedKeywords =
-[
-    "related",
-    "related topic",
-    "related topics",
-    "learn next",
-    "what next",
-    "after this",
-    "other topics"
-];
-
-const yesKeywords =
-[
-    "yes",
-    "yeah",
-    "yep",
-    "sure",
-    "okay",
-    "ok",
-    "please",
-    "yes please"
-];
-
-const noKeywords =
-[
-    "no",
-    "nope",
-    "not now",
-    "no thanks",
-    "no thank you"
-];
 
 
 // ------------------------------------------------------------
 // EVENT LISTENERS
 // ------------------------------------------------------------
 
-askButton.addEventListener("click", processQuestion);
+askButton.addEventListener("click", handleQuestion);
 
 questionBox.addEventListener("keydown", function(event)
 {
     if (event.key === "Enter")
     {
-        processQuestion();
+        handleQuestion();
     }
 });
 
 
 // ------------------------------------------------------------
-// MAIN CHATBOT FUNCTIONS
+// HANDLE USER QUESTION
 // ------------------------------------------------------------
 
-function processQuestion()
+function handleQuestion()
 {
-    const originalQuestion = questionBox.value.trim();
+    const question = questionBox.value.trim();
 
-    if (originalQuestion === "")
+    if (question === "")
     {
         return;
     }
 
-    displayMessage(originalQuestion, "user-message");
-
-    const normalizedQuestion = normalizeText(originalQuestion);
-    const answer = findAnswer(normalizedQuestion);
-
-    displayMessage(answer, "bot-message");
+    displayMessage(question, "user-message");
 
     questionBox.value = "";
-    questionBox.focus();
+
+    const response = getResponse(question);
+
+    displayMessage(response, "bot-message");
 }
 
 
-function findAnswer(question)
+// ------------------------------------------------------------
+// GET CHATBOT RESPONSE
+// ------------------------------------------------------------
+
+function getResponse(question)
 {
-    /*
-        If the chatbot previously found multiple matching topics,
-        check whether the user selected one of those topics.
-    */
-    if (pendingTopicMatches !== null)
-    {
-        const selectedTopic = findPendingTopic(question);
+    const normalizedQuestion = normalizeText(question);
 
-        if (selectedTopic !== null)
-        {
-            const request = pendingTopicRequest;
 
-            pendingTopicMatches = null;
-            pendingTopicRequest = null;
+    // --------------------------------------------------------
+    // HANDLE YES / NO RESPONSE FOR EXAMPLES
+    // --------------------------------------------------------
 
-            return formatRequestedInformation(selectedTopic, request);
-        }
-
-        /*
-            The user entered a new topic instead of selecting one of
-            the clarification choices. Clear the pending clarification
-            and continue processing the question normally.
-        */
-        pendingTopicMatches = null;
-        pendingTopicRequest = null;
-    }
-
-    /*
-        If the chatbot previously asked whether the user wanted
-        examples, first check for an exact yes or no response.
-    */
     if (pendingExampleTopic !== null)
     {
-        if (isExactResponse(question, yesKeywords))
+        if (normalizedQuestion === "yes" ||
+            normalizedQuestion === "y")
         {
             const topic = pendingExampleTopic;
+
             pendingExampleTopic = null;
 
             return formatExamples(topic);
         }
 
-        if (isExactResponse(question, noKeywords))
+        if (normalizedQuestion === "no" ||
+            normalizedQuestion === "n")
         {
             pendingExampleTopic = null;
 
-            return "Okay. What other C++ topic would you like to explore?";
+            return "Okay. What would you like to learn about next?";
         }
 
-        /*
-            The user entered a new topic instead of answering yes or no.
-        */
+        // The user asked something else instead of answering yes/no.
         pendingExampleTopic = null;
     }
 
-    /*
-        Determine what type of information the student requested.
-    */
-    const request =
-    {
-        wantsExample: containsAny(question, exampleKeywords),
-        wantsSyntax: containsAny(question, syntaxKeywords),
-        wantsRelated: containsAny(question, relatedKeywords)
-    };
 
-    const topicMatches = findTopics(question);
+    // --------------------------------------------------------
+    // HANDLE CLARIFICATION
+    // --------------------------------------------------------
 
-    if (topicMatches.length === 0)
+    if (pendingClarification !== null)
     {
-        return "I do not have an answer for that C++ topic yet. " +
-               "Try asking about variables, data types, constants, input and output, " +
-               "if statements, loops, functions, arrays, vectors, structures, " +
-               "classes, objects, constructors, references, or pointers.";
+        const matchedTopic =
+            findClarificationTopic(
+                normalizedQuestion,
+                pendingClarification
+            );
+
+        if (matchedTopic !== null)
+        {
+            pendingClarification = null;
+
+            return formatRequestedInformation(
+                matchedTopic,
+                question
+            );
+        }
+
+        // The response did not identify one of the choices.
+        pendingClarification = null;
     }
 
-    /*
-        More than one topic contains the most-specific matching keyword.
-    */
-    if (topicMatches.length > 1)
-    {
-        pendingTopicMatches = topicMatches;
-        pendingTopicRequest = request;
 
-        return formatTopicChoices(topicMatches);
+    // --------------------------------------------------------
+    // FIND MATCHING TOPICS
+    // --------------------------------------------------------
+
+    const matches = findMatchingTopics(normalizedQuestion);
+
+    if (matches.length === 0)
+    {
+        return "I'm sorry, I don't have information about that topic.";
     }
 
-    return formatRequestedInformation(topicMatches[0], request);
+
+    // --------------------------------------------------------
+    // ONE MATCH
+    // --------------------------------------------------------
+
+    if (matches.length === 1)
+    {
+        return formatRequestedInformation(
+            matches[0],
+            question
+        );
+    }
+
+
+    // --------------------------------------------------------
+    // MULTIPLE MATCHES
+    // --------------------------------------------------------
+
+    const bestMatches = findBestMatches(
+        matches,
+        normalizedQuestion
+    );
+
+    if (bestMatches.length === 1)
+    {
+        return formatRequestedInformation(
+            bestMatches[0],
+            question
+        );
+    }
+
+
+    // --------------------------------------------------------
+    // ASK USER TO CLARIFY
+    // --------------------------------------------------------
+
+    pendingClarification = bestMatches;
+
+    return formatClarification(bestMatches);
 }
 
 
 // ------------------------------------------------------------
-// TOPIC SEARCHING
+// NORMALIZE TEXT
 // ------------------------------------------------------------
 
-function findTopics(question)
+function normalizeText(text)
 {
-    /*
-        Search all keywords and keep the topics associated with the
-        longest matching keyword.
+    return text
+        .toLowerCase()
+        .replace(/[?.,!;:]/g, "")
+        .trim();
+}
 
-        This allows a shared keyword, such as open(), to return both
-        ifstream and ofstream while preventing shorter, less-specific
-        keywords from creating unnecessary matches.
-    */
-    const keywordEntries = [];
+
+// ------------------------------------------------------------
+// FIND MATCHING TOPICS
+// ------------------------------------------------------------
+
+function findMatchingTopics(question)
+{
+    const matches = [];
 
     for (const topic of topics)
     {
         for (const keyword of topic.keywords)
         {
-            keywordEntries.push(
-                {
-                    keyword: keyword,
-                    topic: topic
-                }
-            );
+            const normalizedKeyword =
+                normalizeText(keyword);
+
+            if (question.includes(normalizedKeyword))
+            {
+                matches.push(topic);
+                break;
+            }
         }
     }
 
-    let longestMatchLength = 0;
-    let matchingTopics = [];
+    return matches;
+}
 
-    for (const entry of keywordEntries)
+
+// ------------------------------------------------------------
+// FIND BEST MATCHES
+// ------------------------------------------------------------
+
+function findBestMatches(matches, question)
+{
+    let highestScore = 0;
+    let bestMatches = [];
+
+    for (const topic of matches)
     {
-        if (containsWholeKeyword(question, entry.keyword))
+        let score = 0;
+
+        for (const keyword of topic.keywords)
         {
-            const keywordLength = entry.keyword.length;
+            const normalizedKeyword =
+                normalizeText(keyword);
 
-            /*
-                A longer keyword is more specific, so discard matches
-                made by shorter keywords.
-            */
-            if (keywordLength > longestMatchLength)
+            if (question.includes(normalizedKeyword))
             {
-                longestMatchLength = keywordLength;
-                matchingTopics = [entry.topic];
-            }
-
-            /*
-                Keep topics that match another keyword of the same
-                maximum length.
-            */
-            else if (keywordLength === longestMatchLength)
-            {
-                if (!matchingTopics.includes(entry.topic))
+                if (normalizedKeyword.length > score)
                 {
-                    matchingTopics.push(entry.topic);
+                    score = normalizedKeyword.length;
                 }
             }
         }
+
+        if (score > highestScore)
+        {
+            highestScore = score;
+            bestMatches = [topic];
+        }
+        else if (score === highestScore)
+        {
+            bestMatches.push(topic);
+        }
     }
 
-    return matchingTopics;
+    return bestMatches;
 }
 
 
-function formatTopicChoices(topicMatches)
+// ------------------------------------------------------------
+// FIND TOPIC FROM CLARIFICATION
+// ------------------------------------------------------------
+
+function findClarificationTopic(question, choices)
 {
-    let response =
-        "I found multiple topics that match your question. " +
-        "Please enter the topic you intended:\n";
-
-    for (const topic of topicMatches)
+    for (const topic of choices)
     {
-        response += "\n• " + topic.topic;
-    }
+        const normalizedTopic =
+            normalizeText(topic.topic);
 
-    return response;
-}
-
-
-function findPendingTopic(question)
-{
-    for (const topic of pendingTopicMatches)
-    {
-        /*
-            Allow the student to select the topic by entering its
-            exact topic name.
-        */
-        if (question === normalizeText(topic.topic))
+        if (question.includes(normalizedTopic))
         {
             return topic;
         }
 
-        /*
-            Also allow a keyword that uniquely identifies one of the
-            pending topics.
-        */
         for (const keyword of topic.keywords)
         {
-            if (containsWholeKeyword(question, keyword))
+            const normalizedKeyword =
+                normalizeText(keyword);
+
+            if (question.includes(normalizedKeyword))
             {
                 return topic;
             }
@@ -348,81 +344,86 @@ function findPendingTopic(question)
 }
 
 
-function formatRequestedInformation(topic, request)
+// ------------------------------------------------------------
+// FORMAT CLARIFICATION
+// ------------------------------------------------------------
+
+function formatClarification(matches)
 {
-    if (request.wantsExample)
+    let response =
+        "I found more than one topic that may match your question." +
+        "\n\nWhich topic did you mean?";
+
+    for (const topic of matches)
+    {
+        response +=
+            "\n- " +
+            topic.topic;
+    }
+
+    return response;
+}
+
+
+// ------------------------------------------------------------
+// FORMAT REQUESTED INFORMATION
+// ------------------------------------------------------------
+
+function formatRequestedInformation(topic, question)
+{
+    const normalizedQuestion =
+        normalizeText(question);
+
+
+    // --------------------------------------------------------
+    // RELATED TOPICS ONLY
+    // --------------------------------------------------------
+
+    if (normalizedQuestion.includes("related"))
+    {
+        return formatRelatedTopics(topic, true);
+    }
+
+
+    // --------------------------------------------------------
+    // EXAMPLES ONLY
+    // --------------------------------------------------------
+
+    if (normalizedQuestion.includes("example"))
     {
         return formatExamples(topic);
     }
 
-    if (request.wantsSyntax)
+
+    // --------------------------------------------------------
+    // SYNTAX ONLY
+    // --------------------------------------------------------
+
+    if (normalizedQuestion.includes("syntax"))
     {
         return formatSyntax(topic);
     }
 
-    if (request.wantsRelated)
-    {
-        return formatRelatedTopics(topic);
-    }
 
-    pendingExampleTopic = topic;
+    // --------------------------------------------------------
+    // DEFAULT RESPONSE
+    // --------------------------------------------------------
+
+    if (topic.examples && topic.examples.length > 0)
+    {
+        pendingExampleTopic = topic;
+    }
+    else
+    {
+        pendingExampleTopic = null;
+    }
 
     return formatDescription(topic);
 }
 
 
-function containsWholeKeyword(question, keyword)
-{
-    const escapedKeyword = keyword.replace(
-        /[.*+?^${}()|[\]\\]/g,
-        "\\$&"
-    );
-
-    const pattern = new RegExp(
-        "(^|\\s)" + escapedKeyword + "(?=\\s|$)",
-        "i"
-    );
-
-    return pattern.test(question);
-}
-
-
 // ------------------------------------------------------------
-// KEYWORD HELPERS
-// ------------------------------------------------------------
-
-function containsAny(question, keywords)
-{
-    for (const keyword of keywords)
-    {
-        if (question.includes(keyword))
-        {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-
-function isExactResponse(question, responses)
-{
-    const cleanedQuestion = question.trim();
-
-    for (const response of responses)
-    {
-        if (cleanedQuestion === response)
-        {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-
-// ------------------------------------------------------------
-// RESPONSE FORMATTING
+// FORMAT DESCRIPTION
 // ------------------------------------------------------------
 
 function formatDescription(topic)
@@ -430,34 +431,75 @@ function formatDescription(topic)
     let response =
         topic.topic +
         "\n\n" +
-        topic.description +
-        "\n\nSyntax:\n" +
-        topic.syntax;
+        topic.description;
 
-    response += "\n\n" + formatRelatedTopics(topic, false);
+    if (topic.syntax)
+    {
+        response +=
+            "\n\nSyntax:\n" +
+            topic.syntax;
+    }
 
     response +=
-        "\n\nWould you like to see examples? Enter yes or no.";
+        "\n\n" +
+        formatRelatedTopics(topic, false);
+
+    if (topic.examples &&
+        topic.examples.length > 0)
+    {
+        response +=
+            "\n\nWould you like to see examples? Enter yes or no.";
+    }
 
     return response;
 }
 
 
+// ------------------------------------------------------------
+// FORMAT SYNTAX
+// ------------------------------------------------------------
+
 function formatSyntax(topic)
 {
+    if (!topic.syntax)
+    {
+        return topic.topic +
+               " does not have syntax associated with this topic.";
+    }
+
     return topic.topic +
            " Syntax:\n\n" +
            topic.syntax;
 }
 
 
+// ------------------------------------------------------------
+// FORMAT EXAMPLES
+// ------------------------------------------------------------
+
 function formatExamples(topic)
 {
-    let response = topic.topic + " Examples:\n";
-
-    for (let i = 0; i < topic.examples.length; i++)
+    if (!topic.examples ||
+        topic.examples.length === 0)
     {
-        response += "\nExample " + (i + 1) + ":\n";
+        return "There are no examples for " +
+               topic.topic +
+               ".";
+    }
+
+    let response =
+        topic.topic +
+        " Examples:\n";
+
+    for (let i = 0;
+         i < topic.examples.length;
+         i++)
+    {
+        response +=
+            "\nExample " +
+            (i + 1) +
+            ":\n";
+
         response += topic.examples[i];
 
         if (i < topic.examples.length - 1)
@@ -470,18 +512,25 @@ function formatExamples(topic)
 }
 
 
-function formatRelatedTopics(topic, includeTopicName = true)
+// ------------------------------------------------------------
+// FORMAT RELATED TOPICS
+// ------------------------------------------------------------
+
+function formatRelatedTopics(topic, heading)
 {
-    if (!topic.relatedTopics || topic.relatedTopics.length === 0)
+    if (!topic.relatedTopics ||
+        topic.relatedTopics.length === 0)
     {
-        return "No related topics are currently available.";
+        return "There are no related topics.";
     }
 
-    let response;
+    let response = "";
 
-    if (includeTopicName)
+    if (heading)
     {
-        response = topic.topic + " Related Topics:\n";
+        response =
+            topic.topic +
+            " Related Topics:\n\n";
     }
     else
     {
@@ -490,7 +539,9 @@ function formatRelatedTopics(topic, includeTopicName = true)
 
     for (const relatedTopic of topic.relatedTopics)
     {
-        response += "\n• " + relatedTopic;
+        response +=
+            "\n- " +
+            relatedTopic;
     }
 
     return response;
@@ -498,27 +549,20 @@ function formatRelatedTopics(topic, includeTopicName = true)
 
 
 // ------------------------------------------------------------
-// INPUT AND DISPLAY HELPERS
+// DISPLAY MESSAGE
 // ------------------------------------------------------------
-
-function normalizeText(text)
-{
-    return text
-        .toLowerCase()
-        .replace(/[?!.,;:]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-}
-
 
 function displayMessage(message, className)
 {
-    const messageElement = document.createElement("div");
+    const messageElement =
+        document.createElement("div");
 
-    messageElement.className = className;
+    messageElement.classList.add(className);
+
     messageElement.textContent = message;
 
-    conversation.appendChild(messageElement);
+    chatBox.appendChild(messageElement);
 
-    conversation.scrollTop = conversation.scrollHeight;
+    chatBox.scrollTop =
+        chatBox.scrollHeight;
 }
