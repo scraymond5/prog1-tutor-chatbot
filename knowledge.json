@@ -1,6 +1,6 @@
 [
     {
-        "topic": "Header files",
+        "topic": "Header Files",
         "keywords": [
             "Header files",
             "Header file",
@@ -42,9 +42,6 @@
         ],
         "description": "The <iostream> header file provides features for standard input and output.\n\nIt provides objects such as cin for input and cout for output, along with other stream features used to communicate with the user.",
         "syntax": "#include <iostream>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
             "cin",
@@ -65,9 +62,6 @@
         ],
         "description": "The <iomanip> header file provides I/O manipulator functions used to control the formatting of input and output.\n\nCommon features provided by <iomanip> include setw(), setprecision(), and setfill(). These can be used to control field width, floating-point precision, and fill characters.",
         "syntax": "#include <iomanip>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
             "I/O manipulators",
@@ -88,9 +82,6 @@
         ],
         "description": "The <string> header file provides the string class and related features used to store and manipulate text.\n\nA string can contain a sequence of characters and provides functions for examining and modifying the stored text.\n\nFeatures provided by <string> include the string class, string functions, and to_string().",
         "syntax": "#include <string>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
             "Strings",
@@ -107,15 +98,11 @@
             "<fstream>",
             "#include <fstream>",
             "fstream header",
-            "File header",
             "File streams",
             "File input output"
         ],
         "description": "The <fstream> header file provides classes used to read data from files and write data to files.\n\nThe ifstream class is used for file input, the ofstream class is used for file output, and the fstream class can be used for both input and output.\n\nFile streams allow many of the same input and output operations used with cin and cout to be performed with files.",
         "syntax": "#include <fstream>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
             "File input",
@@ -162,9 +149,6 @@
         ],
         "description": "The <cmath> header file provides mathematical functions used to perform common mathematical calculations.\n\nThese functions can be used for operations such as calculating powers, square roots, absolute values, and rounding values.\n\nCommon functions provided by <cmath> include:\n- sqrt(x) - Returns the square root of x.\n- pow(base, exponent) - Raises a value to a specified power.\n- fabs(x) - Returns the absolute value of a floating-point number.\n- abs(x) - Returns the absolute value of an integer.\n- ceil(x) - Rounds a value up to the next whole number.\n- floor(x) - Rounds a value down to the previous whole number.\n- round(x) - Rounds a value to the nearest whole number.\n\nThe <cmath> library contains many additional mathematical functions beyond those listed above. These are the functions most commonly used in this course.",
         "syntax": "#include <cmath>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
             "Data Types",
@@ -184,16 +168,12 @@
         ],
         "description": "The <cstdlib> header file provides several general-purpose functions.\n\nFor this class, <cstdlib> is primarily used for generating pseudorandom numbers using rand() and setting the starting seed using srand().\n\nThe rand() function generates a pseudorandom integer, while srand() sets the seed used by rand().",
         "syntax": "#include <cstdlib>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
             "Random numbers",
             "rand()",
             "srand()",
-            "<ctime>",
-            "time()"
+            "<ctime>"
         ]
     },
     {
@@ -203,17 +183,12 @@
             "<ctime>",
             "#include <ctime>",
             "ctime header",
-            "Time header",
-            "time() header"
+            "Time header"
         ],
         "description": "The <ctime> header file provides functions and types used to work with date and time information.\n\nFor this class, <ctime> is primarily used for the time() function. The current time can be used with srand() to provide a changing seed for pseudorandom number generation.\n\nUsing a changing seed allows rand() to generate a different pseudorandom sequence each time the program runs.",
         "syntax": "#include <ctime>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
-            "time()",
             "Random numbers",
             "rand()",
             "srand()",
@@ -227,18 +202,12 @@
             "<cctype>",
             "#include <cctype>",
             "cctype header",
-            "Character header",
-            "Character functions"
+            "Character header"
         ],
         "description": "The <cctype> header file provides functions used to examine and convert individual characters.\n\nCharacter functions can determine whether a character has a particular property, such as being a digit or whitespace character. Other functions can convert letters between uppercase and lowercase.\n\nFunctions used in this class include isdigit(), isspace(), toupper(), and tolower().",
         "syntax": "#include <cctype>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
-            "Character functions",
-            "Characters",
             "isdigit()",
             "isspace()",
             "toupper()",
@@ -256,13 +225,10 @@
         ],
         "description": "The <vector> header file provides the vector class, which is used to store a collection of values of the same data type.\n\nUnlike a traditional array, a vector can change its size while the program is running. Vectors also provide functions that can be used to add, remove, access, and examine elements.",
         "syntax": "#include <vector>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
             "Vectors",
-            "Vector functions",
+            "Vectors and functions",
             "Arrays",
             "size()",
             "capacity()",
@@ -282,29 +248,22 @@
         ],
         "description": "The <algorithm> header file provides functions for performing common operations on collections of data.\n\nThese algorithms can perform operations such as sorting, searching, counting, and rearranging values.\n\nMany algorithms operate on a range of elements specified by iterators. For containers such as vectors, the begin() and end() functions can be used to provide the beginning and end of the range.\n\nFunctions used in this class include sort(), find(), copy(), and copy_n().",
         "syntax": "#include <algorithm>",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Header files",
             "sort()",
-            "Sorting",
             "Vectors",
-            "Arrays",
-            "Iterators"
+            "Arrays"
         ]
     },
     {
         "topic": "Algorithms",
         "keywords": [
             "Algorithm",
-            "Algorithms"
+            "Algorithms",
+            "Programming Algorithms",
+            "Programming Algorithm"
         ],
         "description": "The term 'algorithm' can refer to more than one concept in this chatbot.\n\nPlease be more specific about what you would like to learn:\n\n- Program algorithms - A step-by-step process used to solve a problem or accomplish a task.\n- <algorithm> - The C++ Standard Library header file that provides algorithms such as sort(), find(), copy(), and copy_n().\n\nPlease specify which topic you would like to learn about by asking for either 'Program algorithms' or '<algorithm>'.",
-        "syntax": "There is no associated syntax for this topic.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Program algorithms",
             "<algorithm>"
@@ -372,10 +331,6 @@
             "Long lines"
         ],
         "description": "Word wrap is a feature of a code editor that automatically displays a long line of code on multiple lines when it is too wide to fit within the editor window.\n\nWord wrap changes only how the code is displayed in the editor. It does not add newline characters to the source code and does not affect how the program is compiled or executed.\n\nAlthough word wrap can make long lines easier to view, programmers should avoid unnecessarily long lines of code. Statements can often be formatted across multiple lines to improve readability.\n\nWord wrap should not be confused with output wrapping. Word wrap affects how source code is displayed in the editor, not how text is displayed by the running program.\n\nWord wrap can also affect how code looks when copied into a MS Word, PDF, or text document; something that might be done for documentation purposes. When program files are submitted to Canvas word wrap is possible.",
-        "syntax": "There is no associated syntax for word wrap.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Readability",
             "Code formatting",
@@ -397,9 +352,6 @@
         ],
         "description": "Coding standards are a set of guidelines used to keep source code consistent, readable, and easy to maintain.\n\nCoding standards may specify how code should be formatted and documented, including naming conventions, indentation, whitespace, comments, line length, and the organization of program statements.\n\nFollowing consistent coding standards makes programs easier to read and understand, especially when multiple programmers are working with the same code.\n\nCoding standards can vary between courses, organizations, and development teams. When a specific set of coding standards is provided, those standards should be followed consistently throughout the program.",
         "syntax": "There is no associated syntax for coding standards.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Comments",
             "Header comment",
@@ -575,7 +527,6 @@
             "Parts of a program"
         ],
         "description": "Program structure refers to the overall organization of a C++ program and how its components are arranged.\n\nAlthough programs vary in size and complexity, the programs written in this course generally follow a consistent structure.\n\nA typical program for this course is organized in the following order:\n- Header comment\n- #include directives\n- User-defined namespace definitions (when used)\n- Structure definitions (when used)\n- Enumerations (when used)\n- Global variables/constants (when used)\n- Function prototypes\n- The main() function\n- Function definitions\n\nEach section is placed before it is needed by the compiler. For example, structures are defined before they are used as global variables or function parameters, and function prototypes are declared before they are called from main().\n\nFollowing a consistent program structure makes source code easier to read, understand, test, debug, and maintain. As programs become larger, good program organization becomes increasingly important.\n\nAs programs become larger, good program structure becomes increasingly important for organizing code and separating related tasks.",
-        "syntax": "There is no syntax to show for program structure.",
         "examples": [
             "Typical program structure used in this course.\n\n//==================================================\n// Header Comment\n//==================================================\n\n#include <iostream>\n#include <string>\n\n//==================================================\n// User-Defined Namespaces (when used)\n//==================================================\n\nnamespace Geometry\n{\n    // constants\n    // structures\n    // function prototypes\n}\n\n//==================================================\n// Structures (when used)\n//==================================================\n\n//==================================================\n// Enumerations (when used)\n//==================================================\n\n//==================================================\n// Global variables/constants (when used)\n//==================================================\n\n//==================================================\n// Function Prototypes\n//==================================================\n\n//==================================================\n// main()\n//==================================================\n\nint main()\n{\n\n    return 0;\n}\n\n//==================================================\n// Function Definitions\n//=================================================="
         ],
@@ -634,10 +585,6 @@
             "Executable statement"
         ],
         "description": "A statement is a complete instruction that tells the computer to perform an action.\n\nA program consists of one or more statements that are executed in sequence unless the program's logic changes the order of execution.\n\nMost C++ statements end with a semicolon (;). However, some language constructs, such as if statements, loops, function definitions, and class definitions, use code blocks enclosed in curly braces instead of ending with a semicolon.\n\nDifferent types of statements perform different tasks, such as declaring variables, assigning values, performing calculations, calling functions, displaying output, receiving input, making decisions, and repeating actions.\n\nStatements can be grouped into code blocks using curly braces to indicate that they belong together.",
-        "syntax": "There is no syntax to show for statements",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Semicolon",
             "Variables",
@@ -660,10 +607,6 @@
             "End of statement"
         ],
         "description": "A semicolon (;) is used to mark the end of most C++ statements.\n\nWhen the compiler encounters a semicolon, it knows that the current statement has ended and the next statement begins.\n\nMany statements require a semicolon, including variable declarations, assignment statements, function calls, input statements, output statements, and return statements.\n\nNot every line of C++ code ends with a semicolon. Language constructs such as if statements, loops, function definitions, and namespaces use code blocks enclosed in curly braces rather than ending with a semicolon.\n\nPlacing a semicolon where one does not belong can change the behavior of a program or cause logic errors. Forgetting a required semicolon usually results in a compiler error.",
-        "syntax": "There is no syntax to show for output buffers",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Statements",
             "Syntax",
@@ -693,10 +636,6 @@
             "Semantic errors"
         ],
         "description": "An error is a mistake in a program that prevents it from working correctly or producing the expected result.\n\nProgramming errors are commonly divided into three categories:\n\nSyntax errors - Errors that violate the rules (syntax) of the C++ language. These errors are detected by the compiler and must be corrected before the program can be compiled. Examples include missing semicolons, unmatched curly braces, misspelled keywords, invalid identifiers, and assigning a value of an incompatible data type.\n\nRuntime errors - Errors that occur while a program is executing. The program compiles successfully, but an error occurs during execution. Examples include dividing by zero, opening a file that does not exist, or accessing memory that is not valid.\n\nLogic errors (also called semantic errors) - Errors in the program's logic or algorithm. The program compiles and executes successfully, but produces incorrect results because the program does not perform the intended calculations or operations. Examples include using an incorrect formula, forgetting parentheses in an expression, or using the wrong comparison operator in an if statement.\n\nOne of the most important debugging skills is determining which type of error has occurred before attempting to fix it.",
-        "syntax": "There is no syntax to show for errors",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Debugging",
             "Compiler",
@@ -714,10 +653,6 @@
             "Syntax rules",
             "Language rules",
             "Grammar"
-        ],
-        "syntax": "There is no associated syntax for syntax.",
-        "examples": [
-            "There are no examples for this topic."
         ],
         "description": "Syntax is the set of rules that defines how statements and other elements of a programming language must be written.\n\nJust as spoken languages have rules for arranging words and punctuation, programming languages have rules for arranging keywords, identifiers, operators, symbols, and other elements of code.\n\nCode that does not follow the syntax rules of C++ can cause a syntax error and prevent the program from compiling.\n\nExamples of syntax rules include using semicolons to end many statements, matching curly braces around code blocks, using parentheses where required, and following the rules for valid identifiers.",
         "relatedTopics": [
@@ -743,10 +678,6 @@
             "Understandable code"
         ],
         "description": "Readability refers to how easy source code is for a programmer to read, understand, and follow.\n\nReadable code makes the purpose and structure of a program clear without requiring the reader to spend unnecessary time determining what the code is doing.\n\nReadability can be improved by using meaningful names, consistent indentation, appropriate whitespace, clear comments, logical organization, and consistent coding standards.\n\nStatements should be formatted so they are easy to follow, and unnecessarily complicated expressions or overly long lines should be avoided when a clearer solution is available.\n\nReadable code is especially important when programs are maintained, debugged, modified, or shared with other programmers. Code is often read many more times than it is originally written.\n\nReadability generally does not change how a C++ program executes, but it can greatly affect how easy the program is to understand and maintain.",
-        "syntax": "There is no associated syntax for readability.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Coding standards",
             "Naming conventions",
@@ -771,10 +702,6 @@
             "Code layout"
         ],
         "description": "Code formatting refers to how source code is visually arranged and organized to make it easier to read and understand.\n\nFormatting includes the use of indentation, whitespace, blank lines, line breaks, and the placement of curly braces. Consistent formatting helps make the structure of a program easy to identify.\n\nCode formatting generally does not change how a C++ program executes, but poorly formatted code can make the program difficult to read, understand, debug, and maintain.\n\nFormatting conventions may vary between courses, organizations, and development teams. A chosen formatting style should be applied consistently throughout a program.\n\nCode formatting is one part of coding standards and contributes to overall code readability.",
-        "syntax": "There is no associated syntax for code formatting.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Coding standards",
             "Readability",
@@ -796,14 +723,9 @@
             "Self-documenting code"
         ],
         "description": "Program documentation is information created to describe the purpose, design, operation, use, and maintenance of a program or software system.\n\nIn this course, program documentation primarily refers to documentation within the source code that helps programmers understand the purpose, structure, and operation of a program.\n\nDocumentation can include header comments, comments that explain important sections of code, and documentation describing the purpose and use of functions.\n\nMeaningful names for variables, functions, classes, and other identifiers also help make code self-documenting and easier to understand.\n\nGood documentation should provide useful information that is not already obvious from the code. Comments that simply repeat what a clear statement already shows are usually unnecessary.\n\nConsistent formatting, indentation, and organization also contribute to making a program easier to read and maintain.\n\nProgram documentation can also include documents created during the design, development, and use of a software system, such as requirements and design documentation, UML diagrams, pseudocode, system manuals, and user manuals. These forms of documentation are beyond the scope of this course and are covered in more detail in courses such as Systems Analysis and Design.",
-        "syntax": "There is no associated syntax for program documentation.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Comments",
             "Header comment",
-            "Function documentation",
             "Naming conventions",
             "Coding standards",
             "Readability",
@@ -850,10 +772,6 @@
             "Program design"
         ],
         "description": "A flowchart is a visual diagram used to represent the steps and logic of an algorithm or process.\n\nFlowcharts use standardized shapes connected by arrows to show the order in which actions are performed, where decisions are made, and how the program moves from one step to another.\n\nCommon flowchart symbols include:\n- Oval or terminator - represents the start or end of the flowchart.\n- Rectangle - represents a process, calculation, assignment, or other action.\n- Parallelogram - represents input or output, such as receiving user input or displaying information.\n- Diamond - represents a decision or condition where the flow can follow different paths.\n- Arrow - shows the direction of program flow from one step to another.\n- Circle - can be used as a connector between different parts of a flowchart.\n\nFlowcharts and pseudocode can represent the same program logic in different ways. Pseudocode describes the logic using written steps, while a flowchart represents those steps visually using symbols and connecting arrows. Because of this, pseudocode can often be converted directly into a flowchart.\n\nFor additional information and examples of flowchart symbols, visit: https://www.lucidchart.com/pages/examples/flowchart_software/",
-        "syntax": "There is no associated syntax for flowcharts.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Pseudocode",
             "Program design",
@@ -875,17 +793,12 @@
             "Problem-solving"
         ],
         "description": "A program algorithm is a finite, ordered set of steps used to solve a problem or accomplish a task.\n\nAn algorithm describes what must be done and the order in which the steps should be performed. The algorithm is developed before or independently of the specific programming language used to implement it.\n\nA good algorithm should have clearly defined steps, produce the expected result, and eventually end.\n\nAlgorithms can include sequence, selection, and repetition. Sequence performs steps in order, selection chooses between different actions based on a condition, and repetition performs steps multiple times.\n\nAn algorithm can be represented using tools such as pseudocode or a flowchart and can then be translated into program code.\n\nThe term algorithm should not be confused with the C++ <algorithm> header file, which provides functions for performing operations such as sorting, searching, and copying data.",
-        "syntax": "There is no associated syntax for programming algorithms.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Pseudocode",
             "Flowcharts",
             "Program logic",
             "Program design",
-            "Sequence",
-            "Selection",
+            "Control Structures",
             "Loops",
             "<algorithm>"
         ]
@@ -901,17 +814,12 @@
             "Logical flow"
         ],
         "description": "Program logic is the reasoning that determines how a program processes information and decides what actions to perform.\n\nProgram logic determines the order in which statements execute, the conditions used to make decisions, and when actions should be repeated.\n\nThe three basic control structures used to organize program logic are sequence, selection, and repetition. Sequence executes statements in order, selection chooses between different paths based on a condition, and repetition executes statements multiple times.\n\nProgram logic is part of an algorithm. An algorithm describes the overall steps used to solve a problem, while program logic determines how those steps are organized and how decisions and repetition are handled.\n\nProgram logic can be planned using pseudocode or flowcharts before the solution is translated into program code.",
-        "syntax": "There is no associated syntax for program logic.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Program algorithms",
             "Program design",
             "Pseudocode",
             "Flowcharts",
-            "Sequence",
-            "Selection",
+            "Control structures",
             "Loops",
             "Boolean expressions"
         ]
@@ -929,10 +837,6 @@
             "Problem-solving"
         ],
         "description": "Program design is the process of planning how a program will solve a problem before writing the program code.\n\nProgram design begins with understanding the problem and identifying what the program must accomplish. The programmer can then identify the required input, processing, and output and develop an algorithm that describes the steps needed to solve the problem.\n\nTools such as pseudocode and flowcharts can be used to plan and organize the program logic before the algorithm is translated into a programming language.\n\nFor larger programs, design may also include dividing the program into smaller components, determining how those components interact, and identifying the data that must be stored and processed.\n\nCareful program design can make a program easier to write, test, debug, understand, and maintain.",
-        "syntax": "There is no associated syntax for program design.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Program algorithms",
             "Program logic",
@@ -942,6 +846,28 @@
             "Problem solving",
             "Testing",
             "Debugging"
+        ]
+    },
+    {
+        "topic": "Run Time vs. Compile Time",
+        "keywords": [
+            "Run time vs compile time",
+            "Compile time vs run time",
+            "Runtime vs compile time",
+            "Compile time vs runtime",
+            "Run time",
+            "Runtime",
+            "Compile time"
+        ],
+        "description": "Compile time and run time describe two different stages involved in creating and executing a program.\n\nCompile time occurs when the compiler translates the source code into executable code. During this stage, the compiler checks the program for problems such as syntax errors and certain type-related errors. If a compile-time error occurs, the program must be corrected before it can be successfully compiled.\n\nRun time occurs when the compiled program is actually executing. During this stage, statements are executed, variables receive values, user input is processed, calculations are performed, and decisions are made based on the data available while the program is running.\n\nSome problems cannot be detected until run time because they depend on conditions that exist only while the program is executing. These are commonly called run-time errors.\n\nA simple way to distinguish the two is: compile time is when the program is being translated and checked by the compiler; run time is when the compiled program is actually executing.",
+        "relatedTopics": [
+            "Compiler",
+            "Errors",
+            "Syntax Errors",
+            "Logic Errors",
+            "Variables",
+            "Constants",
+            "constexpr"
         ]
     },
     {
@@ -956,10 +882,6 @@
             "Valid names"
         ],
         "description": "An identifier is a programmer-defined name used to identify an element in a program.\n\nIdentifiers can be used to name variables, constants, functions, structures, classes, objects, namespaces, enumerations, and other program elements.\n\nA valid identifier can contain letters, digits, and underscores (_), but it cannot begin with a digit.\n\nIdentifiers cannot contain spaces or special characters, such as -, @, #, or %. They also cannot be C++ keywords, such as int, double, if, while, or return.\n\nIdentifiers are case-sensitive. For example, grade, Grade, and GRADE are three different identifiers.\n\nAlthough an underscore can be used in an identifier, avoid beginning an identifier with an underscore because some underscore-prefixed names are reserved by C++.\n\nThese rules determine whether an identifier is valid. Naming conventions, such as using camelCase or PascalCase, are coding standards rather than requirements of the C++ language.",
-        "syntax": "There is no syntax to show for indentifiers",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Variables",
             "Structures",
@@ -982,10 +904,6 @@
             "Language keywords"
         ],
         "description": "Keywords are words that have a predefined meaning in the C++ language. The compiler recognizes these words as part of the language and uses them to define the structure and behavior of a program.\n\nKeywords are reserved by the C++ language and cannot be used as identifiers. For example, a variable, function, class, or other identifier cannot be named int, while, return, or class.\n\nExamples of C++ keywords include data types (such as int, double, and bool), control statements (such as if, else, switch, while, and for), and other language features (such as return, const, namespace, and class).\n\nAs you learn C++, you will encounter additional keywords. Each keyword has a specific purpose and must be used according to the rules of the language.",
-        "syntax": "There is no syntax to show for keywords.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Identifiers",
             "Variables",
@@ -1003,7 +921,13 @@
         "topic": "Variables",
         "keywords": [
             "variable",
-            "variables"
+            "variables",
+            "Declare variable",
+            "Declaring variables",
+            "Initialize variable",
+            "Initializing variables",
+            "Variable declaration",
+            "Variable initialization"
         ],
         "description": "A variable is a named location in memory used to store data. Every variable has a data type, a name, and a value.\n\nA variable's data type determines the kind of data it can store, such as integers, floating-point numbers, characters, or strings.\n\nA variable name should be descriptive and indicate the purpose of the data it stores. For example, studentName and totalScore are more meaningful than x or a.\n\nVariables are used to store information that may change while a program is running. New values can be assigned to a variable as the program executes.\n\nVariable names are identifiers and must follow the rules for valid C++ identifiers. See the Identifiers topic for the rules governing valid names and the Naming Conventions topic for recommended naming styles.",
         "syntax": "dataType variableName;\n\ndataType variableName = initialValue;",
@@ -1018,7 +942,10 @@
             "Constants",
             "Assignment operators",
             "Type casting",
-            "Scope"
+            "Scope",
+            "Identifiers",
+            "Literals",
+            "Naming conventions"
         ]
     },
     {
@@ -1026,6 +953,8 @@
         "keywords": [
             "Naming conventions",
             "Naming convention",
+            "Variable Naming conventions",
+            "Variable Naming convention",
             "Naming style",
             "Naming styles",
             "Code naming",
@@ -1040,10 +969,6 @@
             "Screaming snake case"
         ],
         "description": "Naming conventions are guidelines for consistently naming variables, constants, functions, classes, and other identifiers in a program.\n\nNaming conventions make code easier to read and help programmers identify the purpose or type of an identifier. Different courses, organizations, and development teams may use different naming conventions.\n\nCommon naming conventions include:\n\ncamelCase - The first word begins with a lowercase letter and each additional word begins with an uppercase letter. Example: totalPrice\n\nPascalCase - Each word begins with an uppercase letter. Example: StudentRecord\n\nsnake_case - Words are lowercase and separated with underscores. Example: total_price\n\nSCREAMING_SNAKE_CASE - Words are uppercase and separated with underscores. Example: MAX_STUDENTS\n\nHungarian notation - A prefix is added to a name to indicate its data type, object type, or purpose. Examples include intNum for an integer, txtName for a text box, and btnSubmit for a button. Hungarian notation is less commonly used to identify basic data types in modern programming, but prefixes are still used in some coding standards, particularly for identifying GUI controls.\n\nThe naming convention used does not change how the program works, but a consistent naming style improves readability and maintainability.",
-        "syntax": "There is no associated syntax for naming conventions.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Coding standards",
             "Variable naming conventions",
@@ -1107,9 +1032,9 @@
         "topic": "Data Types",
         "keywords": [
             "data type",
-            "data types",
             "datatype",
-            "datatypes"
+            "datatypes",
+            "Data types"
         ],
         "description": "A data type tells C++ what kind of value a variable stores, how much memory may be needed, and what operations can be performed.",
         "syntax": "Data types do not have a syntax by themselves. See the related topics for situations where data types would be found.",
@@ -1120,7 +1045,29 @@
             "Variables",
             "Type casting",
             "string functions",
-            "constants"
+            "constants",
+            "Literals",
+            "User-Defined Data Types"
+        ]
+    },
+    {
+        "topic": "User-Defined Data Types",
+        "keywords": [
+            "User-defined data type",
+            "User-defined data types",
+            "User defined data type",
+            "User defined data types",
+            "Custom data type",
+            "Custom data types",
+            "Programmer-defined data type",
+            "Programmer-defined data types"
+        ],
+        "description": "A user-defined data type is a data type created by the programmer rather than one of the fundamental data types provided by C++.\n\nUser-defined data types allow programmers to create types that represent the data needed by a program. They can make programs easier to organize, understand, and maintain by grouping related information or giving meaningful names to sets of values.\n\nThe user-defined data types covered in this course include:\n- Structures - group related data into a single type.\n- Classes - group related data and functions into a single type and provide features for controlling access to the data.\n- Enumerations - define a type consisting of a set of named constant values.\n\nOnce a user-defined data type has been defined, variables of that type can be declared and used in much the same way as variables of built-in data types.",
+        "relatedTopics": [
+            "Structures",
+            "Classes",
+            "Enumerations",
+            "Data Types"
         ]
     },
     {
@@ -1129,7 +1076,10 @@
             "constant",
             "constants",
             "const",
-            "constexpr"
+            "constexpr",
+            "Constant variable",
+            "Named constant",
+            "Named constants"
         ],
         "description": "A constant is a named value that cannot be changed after it is initialized. C++ uses const to define constants. Constants, as a defacto standard, or declared in SCREAMING_SNAKE_CASE",
         "syntax": "const dataType CONSTANT_NAME = value;\n\n",
@@ -1141,7 +1091,9 @@
         "relatedTopics": [
             "Variables",
             "Magic numbers",
-            "Scope"
+            "Scope",
+            "Literals",
+            "Naming conventions"
         ]
     },
     {
@@ -1151,7 +1103,12 @@
             "Assignment statements",
             "Assignment operator",
             "Assignment operators",
-            "Assignment"
+            "Assignment",
+            "=",
+            "Assign a value",
+            "Assign value",
+            "Assignment symbol",
+            "Equals operator"
         ],
         "description": "Assignment operators are used to assign values to variables. The basic assignment operator is =. C++ also provides compound assignment operators that perform an operation and assignment in a single statement. See 'Compound Assignment Operators' for more information.",
         "syntax": "variableName = assignment expression",
@@ -1163,7 +1120,9 @@
         "relatedTopics": [
             "Variables",
             "Order of Operations",
-            "Data types"
+            "Data types",
+            "Compound assignment operators",
+            "Expressions"
         ]
     },
     {
@@ -1237,12 +1196,6 @@
         "keywords": [
             "Unary operators",
             "Unary operator",
-            "++",
-            "Increment operator",
-            "Increment",
-            "--",
-            "Decrement operator",
-            "Decrement",
             "Unary plus",
             "Unary minus"
         ],
@@ -1380,9 +1333,10 @@
         "relatedTopics": [
             "Relational operators",
             "Logical operators",
-            "Bool data type",
+            "Data types",
             "If statements",
-            "Loops"
+            "Loops",
+            "Control Structures"
         ]
     },
     {
@@ -1392,7 +1346,8 @@
             "Expression",
             "C++ expression",
             "Evaluate an expression",
-            "Evaluating expressions"
+            "Evaluating expressions",
+            "Evaluate expression"
         ],
         "description": "An expression is a combination of values, variables, operators, and function calls that can be evaluated to produce a value.\n\nExpressions can perform calculations, compare values, or produce other results that can be assigned to variables, used as conditions, passed to functions, or output.\n\nThe data type of an expression depends on the values and operations used in the expression.",
         "syntax": "operand operator operand\nvariable = expression;",
@@ -1409,7 +1364,9 @@
             "Logical operators",
             "Boolean expressions",
             "Operator precedence",
-            "Assignment operators"
+            "Assignment operators",
+            "Literals",
+            "Variables"
         ]
     },
     {
@@ -1451,10 +1408,6 @@
             "Order Chart"
         ],
         "description": "Operator(s)\t\t\tDescription\n----------------------------------------------------------------------------------------\n()\t\t\t\t\tParentheses\n++, --\t\t\t\tPostfix increment/decrement operators\n++, __, !, +/-\t\t\tPrefix/unary operators (not, positive/negative)\n*, /, %\t\t\t\tMultiplication, division, modulus (left to right)\n+, -\t\t\t\t\tAddition, subtraction (left to right)\n<, <=, >, >=\t\t\tRelational (inequality) operators (left to right)\n==, !=\t\t\t\tEquality operators (left to right)\n&&\t\t\t\t\tLogical 'And'\n||\t\t\t\t\tLogical 'Or'\n=, +=, -=, *=, /=, %=\tAssignment operators (right to left)\n",
-        "syntax": "There is no associated syntax for order of operations.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Order of Operations"
         ]
@@ -1468,7 +1421,11 @@
             "static_cast",
             "static_cast<>()",
             "Implicit cast",
-            "Explicit cast"
+            "Explicit cast",
+            "Casting data types",
+            "Convert data type",
+            "Data type conversion",
+            "Type conversion"
         ],
         "description": "Type casting is a way of converting one data type to another data typeThere are two types of type casting: implicit and explicit.\n\nWith implicit casting the compiler will convert the data type automatically. This can be done when the precision of the value isn't changed: such as 3 converted to 3.00 doesn't change the value.\n\nWith explicit casting you, as the programmer, explicitly tell the compiler to convert the data; this is needed when precision can be lost: if 3.14 is changed to 3, precision is lost.\n\nType casting can be done and assigned to a variable, or used in an output statement.",
         "syntax": "static_cast<dataType>(valueToBeConverted)",
@@ -1478,7 +1435,8 @@
             "Cast the sum of the variables to a float, then divide by 3 to get a flaoting point average.\naverage = static_cast<float>(grade1 + grade2 + grade3) / 3.0;"
         ],
         "relatedTopics": [
-            "Data types"
+            "Data types",
+            "Expressions"
         ]
     },
     {
@@ -1487,11 +1445,9 @@
             "Literals",
             "Literal",
             "Integer literal",
-            "Floating point literal",
-            "Character literals",
-            "Character literal",
-            "String literal",
-            "Boolean literal"
+            "Boolean literal",
+            "Literal value",
+            "Literal values"
         ],
         "description": "A literal is a value written directly in the source code of a program. Unlike a variable, a literal represents the actual value rather than a named location that stores a value.\n\nCommon literals include integer literals, floating-point literals, character literals, string literals, and Boolean literals.\n\nThe way a literal is written helps determine its data type. For example, 25 is an integer literal, 25.5 is a floating-point literal, 'A' is a character literal, \"Hello\" is a string literal, and true is a Boolean literal.",
         "syntax": "Integer:\t25\nFloating-point:\t25.5\nCharacter:\t'A'\nString:\t\t\"Hello\"\nBoolean:\ttrue or false",
@@ -1513,10 +1469,11 @@
         "topic": "Magic numbers",
         "keywords": [
             "Magic number",
-            "Magic numbers"
+            "Magic numbers",
+            "Magic value",
+            "Magic values"
         ],
         "description": "A magic number is a numeric value written directly in code without clearly identifying what the value represents. Named constants should be used instead of magic numbers when the value has a specific meaning.\n\nAlso one can update the named constant and that 'magic number' is updated throughout the whole program.\nMany times the named constant will be declared as a global variable.",
-        "syntax": "There is no syntax to show for magic numbers",
         "examples": [
             "as .0825 might not be readily understood as a tax rate:\nconst double TAX_RATE = 0.0825;",
             "As 18 may not be understood as the minimum voting age:\nconst int MIN_VOTING_AGE = 18;",
@@ -1524,7 +1481,9 @@
         ],
         "relatedTopics": [
             "Variables",
-            "Constants"
+            "Constants",
+            "Coding standards",
+            "Literals"
         ]
     },
     {
@@ -1575,7 +1534,7 @@
         "relatedTopics": [
             "Strings",
             "String functions",
-            ".append() sring function",
+            "String append()",
             "Assignment operators"
         ]
     },
@@ -1605,8 +1564,7 @@
         "relatedTopics": [
             "Strings",
             "String functions",
-            "Arrays",
-            "Characters"
+            "Arrays"
         ]
     },
     {
@@ -1629,26 +1587,26 @@
         ],
         "relatedTopics": [
             "Strings",
-            "String concatenation",
-            "String character access",
-            "String length()",
-            "String size()",
-            "String empty()",
-            "String at()",
-            "String substr()",
-            "String find()",
-            "String rfind()",
-            "String compare()",
-            "String append()",
-            "String insert()",
-            "String erase()",
-            "String replace()",
-            "String clear()",
-            "String isdigit()",
-            "String to_string()",
-            "String isspace()",
-            "String tolower()",
-            "STring toupper()"
+            "concatenation",
+            "character access",
+            "length()",
+            "size()",
+            "empty()",
+            "at()",
+            "substr()",
+            "find()",
+            "rfind()",
+            "compare()",
+            "append()",
+            "insert()",
+            "erase()",
+            "replace()",
+            "clear()",
+            "isdigit()",
+            "to_string()",
+            "isspace()",
+            "tolower()",
+            "toupper()"
         ]
     },
     {
@@ -1984,7 +1942,6 @@
             "Check a character entered by the user.\nchar character;\ncout << \"Enter a character: \";\ncin >> character;\nif(isdigit(character))\n{\n    cout << \"You entered a digit\";\n}"
         ],
         "relatedTopics": [
-            "Characters",
             "ASCII values",
             "Boolean expressions",
             "If statements"
@@ -2034,8 +1991,6 @@
             "Count the whitespace characters in a string.\nstring message = \"Hello World\";\nint count = 0;\nfor(char character : message)\n{\n    if(isspace(character))\n    {\n        count++;\n    }\n}"
         ],
         "relatedTopics": [
-            "Character functions",
-            "Characters",
             "Strings",
             "Escape sequences",
             "Boolean expressions"
@@ -2061,10 +2016,8 @@
             "Convert each character in a string to uppercase.\nstring word = \"hello\";\nfor(int i = 0; i < word.length(); i++)\n{\n    word[i] = static_cast<char>(toupper(word[i]));\n}\ncout << word;\n// Outputs HELLO"
         ],
         "relatedTopics": [
-            "Character functions",
             "tolower()",
-            ".tolower()",
-            "Characters",
+            "tolower()",
             "Strings",
             "ASCII values",
             "Type casting"
@@ -2088,9 +2041,7 @@
             "Convert each character in a string to lowercase.\nstring word = \"HELLO\";\nfor(int i = 0; i < word.length(); i++)\n{\n    word[i] = static_cast<char>(tolower(word[i]));\n}\ncout << word;\n// Outputs hello"
         ],
         "relatedTopics": [
-            "Character functions",
             "toupper()",
-            "Characters",
             "Strings",
             "ASCII values",
             "Type casting"
@@ -2117,7 +2068,6 @@
             "Character values can be used in arithmetic expressions.\nchar letter = 'A';\nletter = letter + 1;\ncout << letter;\n// Outputs B"
         ],
         "relatedTopics": [
-            "Characters",
             "Data types",
             "Type casting",
             "String compare()",
@@ -2241,8 +2191,6 @@
             "User output",
             "cout",
             "Literals",
-            "String literals",
-            "Character literals",
             "endl",
             "Output formatting"
         ]
@@ -2287,10 +2235,6 @@
             "Flush output stream"
         ],
         "description": "The output buffer is a temporary area used to hold data before it is sent to an output device, such as the screen or a file.\n\nWhen a program sends data to an output stream, the data may first be placed in the output buffer. Using a buffer can improve efficiency by allowing multiple pieces of output to be collected and sent together.\n\nFlushing the output buffer causes buffered data to be sent to its destination immediately.\n\nThe endl stream manipulator creates a new line and flushes the output stream. The \\n escape sequence creates a new line but does not explicitly flush the output stream.",
-        "syntax": "There is no syntax to show for output buffers",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "User output",
             "cout",
@@ -2404,7 +2348,7 @@
             "I/O manipulators",
             "setprecision()",
             "showpoint",
-            "Floating-point numbers",
+            "Data Types",
             "Output formatting"
         ]
     },
@@ -2430,7 +2374,7 @@
             "I/O manipulator functions",
             "fixed",
             "showpoint",
-            "Floating-point numbers",
+            "Data Types",
             "Output formatting"
         ]
     },
@@ -2453,7 +2397,7 @@
             "I/O manipulators",
             "fixed",
             "setprecision()",
-            "Floating-point numbers",
+            "Data types",
             "Output formatting"
         ]
     },
@@ -2539,10 +2483,6 @@
             "Formatted display"
         ],
         "description": "Output formatting is the process of controlling how data is displayed to the user.\n\nProper output formatting makes program output easier to read, understand, and interpret. Formatting can control the width of a field, the alignment of values, the number of decimal places displayed, the fill character used for padding, and whether a decimal point is always shown.\n\nC++ provides output formatting through I/O manipulators found in the <iomanip> header file. Manipulators can be used to produce neatly aligned columns, format numeric values, and improve the appearance of program output.\n\nConsistently formatted output is especially important when displaying tables, reports, financial data, and other information that should be easy for users to read.",
-        "syntax": "There is no syntax to show for output formatting.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "I/O manipulators",
             "<iomanip>",
@@ -2630,7 +2570,7 @@
             "Strings",
             "Input buffer",
             "cin.ignore()",
-            "Delimeters"
+            "Delimiters"
         ]
     },
     {
@@ -2644,10 +2584,6 @@
             "Data separator"
         ],
         "description": "A delimiter is a character used to separate individual pieces of data.\n\nCommon delimiters include commas, spaces, tabs, semicolons, and other characters. For example, a comma is commonly used as the delimiter in a CSV (Comma-Separated Values) file.\n\nWhen reading data, a delimiter can be used to determine where one piece of data ends and the next begins.\n\nThe getline() function can use an optional delimiter to determine where it should stop reading. By default, getline() uses the newline character as the delimiter. A different delimiter can be provided when the data is separated by another character.\n\nWhen getline() encounters the delimiter, the delimiter is removed from the input stream but is not stored in the string.",
-        "syntax": "There is no syntax to show for Delimeters",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "getline()",
             "File input",
@@ -2666,10 +2602,6 @@
             "Newline in buffer"
         ],
         "description": "The input buffer is a temporary area used to hold data entered by the user before the program reads it.\n\nWhen the user enters data from the keyboard, the characters are placed in the input buffer. Input operations such as cin >> and getline() then read characters from this buffer.\n\nAn input operation may not remove everything from the buffer. For example, cin >> reads the requested value but leaves the newline character created when the user presses Enter in the buffer.\n\nThis can cause a problem when getline() is used after cin >>. Since getline() normally stops when it encounters a newline character, it may immediately read the leftover newline and return an empty string.\n\nThe cin.ignore() function can be used to remove unwanted characters from the input buffer.",
-        "syntax": "There is no syntax to show for Delimeters",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "User input",
             "cin",
@@ -2716,10 +2648,6 @@
             "Input stream functions"
         ],
         "description": "cin provides several functions that can be used to control and examine input from the input stream.\n\nThese functions can be used to read individual characters, remove unwanted characters from the input buffer, examine input without removing it, return a character to the input stream, and check or reset the state of the input stream.\n\nCommon cin functions include get(), ignore(), peek(), putback(), fail(), and clear().\n\nSee the individual cin function topics for descriptions, syntax, and examples of each function.",
-        "syntax": "There is no syntax to show for cin functions",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "cin",
             "cin.get()",
@@ -2753,8 +2681,7 @@
         "relatedTopics": [
             "cin",
             "cin functions",
-            "Input buffer",
-            "Characters"
+            "Input buffer"
         ]
     },
     {
@@ -2899,10 +2826,11 @@
             "Test data",
             "Validation",
             "Verify program",
-            "Program verification"
+            "Program verification",
+            "Test program",
+            "Testing code"
         ],
         "description": "Testing is the process of executing a program with carefully chosen input to verify that it produces the expected results.\n\nTesting helps identify syntax errors, runtime errors, and logic errors before a program is released or submitted.\n\nGood testing includes using a variety of test cases, including normal input, boundary values, invalid input, and special cases. A program should be tested with more than just the values used while writing the code.\n\nEach test case should have an expected result so the program's actual output can be compared to the correct output.\n\nTesting determines whether a program behaves correctly. If a problem is discovered during testing, debugging is used to locate and correct the error.\n\nPrograms should be tested after each major change to ensure that new code has not introduced additional errors.",
-        "syntax": "There is no syntax associated with program testing.",
         "examples": [
             "Suppose a program calculates the average of three test scores.\n\nPossible test cases:\n- Typical values: 80, 90, 100\n- All zeros: 0, 0, 0\n- Maximum values: 100, 100, 100\n- Decimal values (if allowed): 89.5, 91.0, 87.5\n- Invalid input: -5 or 125 (if scores must be between 0 and 100)\n\nThe program's output should be compared to the expected result for each test case."
         ],
@@ -2911,7 +2839,8 @@
             "Errors",
             "Input validation",
             "Program logic",
-            "Program algorithms"
+            "Program algorithms",
+            "Defensive Programming"
         ]
     },
     {
@@ -2925,10 +2854,11 @@
             "Fix errors",
             "Troubleshooting",
             "Troubleshoot",
-            "Debugging techniques"
+            "Debugging techniques",
+            "Debug code",
+            "Debugger"
         ],
         "description": "Debugging is the process of locating, identifying, and correcting errors in a program.\n\nThe first step in debugging is determining the type of error that has occurred. Errors are commonly classified as syntax errors, runtime errors, or logic errors.\n\nA common debugging approach is to test one part of the program at a time rather than making many changes at once. After each change, the program should be tested again to verify that the problem has been corrected.\n\nUseful debugging techniques include reading compiler error messages carefully, tracing the program's execution, displaying the values of variables with temporary output statements, using a debugger, and testing with a variety of input values.\n\nDebugging is an important problem-solving skill. Most programmers spend a significant amount of time debugging and improving existing code rather than writing new code.",
-        "syntax": "There is no syntax associated with debugging.",
         "examples": [
             "A program is intended to calculate the average of three test scores, but it always displays 0.\n\nOne debugging approach might be:\n1. Verify that the program compiles successfully.\n2. Test the program with known input values.\n3. Display the values of variables after each calculation using temporary cout statements.\n4. Identify where the incorrect value first appears.\n5. Correct the error and test the program again."
         ],
@@ -2939,7 +2869,59 @@
             "Program logic",
             "Program algorithms",
             "cout",
-            "Input validation"
+            "Input validation",
+            "Defensive Programming"
+        ]
+    },
+    {
+        "topic": "Compilers and IDEs",
+        "keywords": [
+            "Compiler",
+            "Compilers",
+            "C++ compiler",
+            "Compile",
+            "Compiling",
+            "Compilation",
+            "IDE",
+            "IDEs",
+            "Integrated Development Environment",
+            "Integrated Development Environments",
+            "Development environment",
+            "Code editor",
+            "Development tools"
+        ],
+        "description": "A compiler is a program that translates source code written in a programming language, such as C++, into code that the computer can execute.\n\nDuring compilation, the compiler also checks the source code for problems such as syntax errors and certain type-related errors. If errors are found, the compiler reports them so they can be corrected.\n\nAn Integrated Development Environment (IDE) is software that provides tools for developing programs. An IDE typically includes a code editor along with tools for compiling, running, and debugging programs.\n\nThe compiler and IDE are not the same thing. The IDE provides the environment and tools used to develop the program, while the compiler performs the translation of the source code.\n\nThe C++ development environments supported in this course are Xcode, CLion, and Visual Studio Community. Each provides the tools needed to write, compile, run, and debug C++ programs.",
+        "relatedTopics": [
+            "Source Code",
+            "Errors",
+            "Run Time vs. Compile Time",
+            "Syntax Errors",
+            "Debugging",
+            "Header Files",
+            "Implementation Files"
+        ]
+    },
+    {
+        "topic": "Source Code",
+        "keywords": [
+            "Source code",
+            "Program code",
+            "Code",
+            "C++ code",
+            "Source file",
+            "Source files",
+            "Program source",
+            "Source program"
+        ],
+        "description": "Source code is the human-readable instructions written by a programmer using a programming language such as C++.\n\nC++ source code contains elements such as statements, variables, functions, classes, and other instructions that describe what the program should do.\n\nSource code is written and edited using a text editor or an Integrated Development Environment (IDE). A compiler translates the C++ source code into code that the computer can execute.\n\nC++ source files commonly use the .cpp file extension.",
+        "relatedTopics": [
+            "Compilers and IDEs",
+            "Program Structure",
+            "Statements",
+            "Syntax",
+            "Comments",
+            "Header Files",
+            "Implementation Files"
         ]
     },
     {
@@ -2960,13 +2942,7 @@
             "Repetition structures"
         ],
         "description": "Control structures determine the order in which statements in a program are executed.\n\nThe three fundamental control structures are sequence, selection, and iteration.\n\nSequence structure executes statements one after another in the order in which they appear in the program. Sequence is the default flow of execution and does not require a special C++ statement.\n\nSelection structures allow a program to choose between different paths of execution based on a condition or value. C++ selection structures include the if structure, switch structure, and ternary operator.\n\nIteration structures repeat a statement or code block. C++ iteration structures include the while loop, do-while loop, and for loop.\n\nControl structures can be combined and nested to create more complex program logic. For example, an if structure can be placed inside a loop, or one loop can be placed inside another.\n\nControl Structures\n|\n|-- Sequence Structure\n|   |-- Statements execute in order\n|\n|-- Selection Structures\n|   |-- If Structure\n|   |   |-- Simple if\n|   |   |-- if-else\n|   |   |-- if-else-if\n|   |   |-- Nested if structures\n|   |-- Switch Structure\n|   |-- Ternary Operator\n|\n|-- Iteration Structures\n    |-- While Loop\n    |-- Do-While Loop\n    |-- For Loop\n    |-- Nested Loops",
-        "syntax": "There is no syntax to show for control structures.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
-            "Sequence",
-            "Selection",
             "If Structure",
             "Switch Structure",
             "Ternary operator",
@@ -3013,7 +2989,6 @@
             "Nested if structures",
             "Switch Structure",
             "Ternary operator",
-            "Selection",
             "Code blocks",
             "Curly braces",
             "Control Structures"
@@ -3038,7 +3013,6 @@
         ],
         "relatedTopics": [
             "Control Structures",
-            "Selection",
             "If Structure",
             "Boolean Expressions",
             "Comparison operators",
@@ -3071,7 +3045,6 @@
         ],
         "relatedTopics": [
             "Control Structures",
-            "Selection",
             "If Structure",
             "Comparison operators",
             "Break",
@@ -3099,7 +3072,6 @@
         ],
         "relatedTopics": [
             "Control Structures",
-            "Selection",
             "If Structure",
             "Boolean Expressions",
             "Comparison operators",
@@ -3124,10 +3096,6 @@
             "File streams"
         ],
         "description": "File I/O (Input/Output) is the process of reading data from files and writing data to files.\n\nUnlike keyboard input and console output, data stored in a file remains available after the program terminates. Files allow programs to store information for later use.\n\nC++ performs file input and output using file streams provided by the <fstream> header file.\n\nThe two file stream classes most commonly used are:\n- ifstream - Reads data from a file.\n- ofstream - Writes data to a file.\n\nBefore a program can read from or write to a file, the file must be opened. When file processing is complete, the file should be closed.\n\nFile I/O uses many of the same operators as console input and output. The extraction operator (>>) is commonly used to read formatted data from a file, while the insertion operator (<<) is used to write formatted data to a file.\n\nFile I/O is commonly used to store program settings, save user data, read configuration files, process reports, and maintain databases of information.Typical steps when using File I/O:\n\n1. Include the <fstream> header file.\n2. Declare an ifstream or ofstream object.\n3. Open the file.\n4. Read from or write to the file.\n5. Close the file.",
-        "syntax": "There is no general syntax for File I/O.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "<fstream>",
             "ifstream",
@@ -3215,6 +3183,31 @@
         ]
     },
     {
+        "topic": "Loops",
+        "keywords": [
+            "Loop",
+            "Loops",
+            "Looping",
+            "Repetition",
+            "Repetition structure",
+            "Repetition structures",
+            "Iteration"
+        ],
+        "description": "A loop is a control structure that allows a program to repeatedly execute a statement or block of statements.\n\nLoops are useful when a task must be performed multiple times. Instead of writing the same statements repeatedly, a loop can control how many times the statements are executed.\n\nC++ provides three primary types of loops:\n- while loop - checks its condition before each iteration and continues while the condition is true.\n- do-while loop - executes the loop body at least once and checks its condition after each iteration.\n- for loop - commonly used when the number of iterations can be controlled with initialization, a condition, and an update.\n\nLoops can be controlled in different ways depending on the problem being solved. Common approaches include counter-controlled, sentinel-controlled, flag-controlled, and EOF-controlled loops.\n\nEach execution of the statements in a loop is called an iteration. The condition that controls a loop must eventually allow the loop to stop unless an infinite loop is intentionally required.",
+        "relatedTopics": [
+            "While Loops",
+            "Do-While Loops",
+            "For Loops",
+            "Nested Loops",
+            "Counter-Controlled Loops",
+            "Sentinel-Controlled Loops",
+            "Flag-Controlled Loops",
+            "EOF-Controlled Loops",
+            "Infinite Loops",
+            "Boolean Expressions"
+        ]
+    },
+    {
         "topic": "Loop Control Components",
         "keywords": [
             "Loop control",
@@ -3231,10 +3224,6 @@
             "Loop body"
         ],
         "description": "Every loop consists of several components that work together to control repetition. Although the syntax differs between loop structures, these components are present in all loops.\n\nInitialization\nSets the starting value of the loop control variable before the loop begins.\n\nCondition\nDetermines whether another iteration of the loop should execute. The condition is evaluated as a Boolean expression.\n\nLoop Body\nContains the statements that are repeated each time the loop executes.\n\nUpdate\nChanges the loop control variable so the condition will eventually become false and the loop will terminate.\n\nTermination\nOccurs when the loop condition evaluates to false. Program execution then continues with the first statement following the loop.\n\nAll loops should be designed so that the update eventually causes the condition to become false. Otherwise, the result is an infinite loop.\n\nFor Professor Raymond's class, every loop should clearly demonstrate its loop control components: initialization, condition, loop body, and update. Although C++ allows other loop styles, such as while(true), they are not to be used because they do not explicitly demonstrate how loop repetition is controlled.",
-        "syntax": "There is no syntax to show for output buffers",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Loops",
             "While Loop",
@@ -3376,6 +3365,8 @@
             "Counter controlled while loop",
             "Counter-controlled loop",
             "Counter controlled loop",
+            "Counter-controlled loops",
+            "Counter controlled loops",
             "Count-controlled while loop",
             "Count controlled while loop",
             "Loop counter",
@@ -3404,6 +3395,8 @@
             "Sentinel controlled while loop",
             "Sentinel-controlled loop",
             "Sentinel controlled loop",
+            "Sentinel-controlled loops",
+            "Sentinel controlled loops",
             "Sentinel value",
             "Sentinel values",
             "Input sentinel",
@@ -3431,6 +3424,8 @@
             "Flag controlled while loop",
             "Flag-controlled loop",
             "Flag controlled loop",
+            "Flag-controlled loops",
+            "Flag controlled loops",
             "Boolean flag",
             "Flag variable",
             "Boolean-controlled loop",
@@ -3446,7 +3441,6 @@
             "While Loop",
             "Loop Control Components",
             "Boolean Expressions",
-            "Boolean Variables",
             "Data Types",
             "If Structure",
             "Infinite Loops"
@@ -3459,6 +3453,8 @@
             "EOF controlled while loop",
             "EOF-controlled loop",
             "EOF controlled loop",
+            "EOF-controlled loops",
+            "EOF controlled loops",
             "End-of-file loop",
             "End of file loop",
             "eof() loop",
@@ -3489,6 +3485,8 @@
             "Do while",
             "Do-while loop",
             "Do while loop",
+            "Do-while loops",
+            "Do while loops",
             "Do-while statement",
             "Do-while structure",
             "Posttest loop"
@@ -3528,7 +3526,6 @@
             "Infinite repetition"
         ],
         "description": "An infinite loop is a loop whose terminating condition never becomes false. As a result, the loop continues to execute indefinitely unless the program is stopped or interrupted.\n\nInfinite loops are usually caused by one or more programming errors. Common causes include:\n- Forgetting to update the loop control variable.\n- Writing an incorrect loop condition.\n- Updating the wrong variable.\n- Resetting the loop control variable each iteration.\n- Using a condition that can never become false.\n\nEvery loop should have a clearly defined terminating condition. The statements within the loop should eventually cause that condition to become false.\n\nInfinite loops may occur with any loop structure, including while loops, do-while loops, and for loops.\n\nAlthough infinite loops are usually programming errors, they are sometimes used intentionally in advanced programs such as operating systems, servers, event-driven applications, and games. These intentional infinite loops normally terminate only when the program is closed or an external event occurs.\n\nAdvanced C++ programs sometimes use intentional infinite loops, such as while(true). Those loops are beyond the scope of this course because they do not explicitly demonstrate the loop control components used to construct well-defined loops.",
-        "syntax": "There is no syntax to show for infinite loops.",
         "examples": [
             "Example 1: The loop control variable is never updated.\n\nint count = 1;\n\nwhile(count <= 5)\n{\n    cout << count << endl;\n}",
             "Example 2: The wrong variable is updated.\n\nint count = 1;\nint total = 0;\n\nwhile(count <= 5)\n{\n    cout << count << endl;\n    total++;\n}",
@@ -3617,9 +3614,6 @@
         ],
         "description": "The continue statement immediately ends the current iteration of a loop and begins the next iteration.\n\nWhen a continue statement executes, the remaining statements in the current iteration are skipped. Control returns to the loop condition or update statement, depending on the type of loop.\n\nFor Professor Raymond's class, Although C++ provides the continue statement, this course does not allow its use. Instead, programs should be designed so that the loop logic clearly determines which statements execute during each iteration without prematurely skipping the remainder of the loop body.\n\nAvoiding continue encourages the development of clear Boolean expressions and well-structured program logic.",
         "syntax": "continue;",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Break",
             "Loops",
@@ -3802,7 +3796,6 @@
             "Unexpected conditions"
         ],
         "description": "Defensive programming is the practice of designing programs to anticipate invalid input, unexpected conditions, and operations that may fail.\n\nA defensive program does not assume that every input, file, calculation, or operation will always succeed. It checks important conditions and responds appropriately when a problem occurs.\n\nCommon defensive programming practices include:\n- Validating user input before using it.\n- Verifying that files opened successfully.\n- Checking that an array or vector index is within its valid bounds.\n- Preventing division by zero.\n- Checking function parameters before processing them.\n- Providing a default case in a switch structure.\n- Displaying clear and useful error messages.\n\nDefensive programming does not mean adding unnecessary conditions or duplicate logic. Each check should address a realistic problem and should be placed where the program can respond appropriately.\n\nThe goal of defensive programming is to make software more reliable, predictable, and easier to test, debug, and maintain.",
-        "syntax": "There is no syntax to show for defensive proragramming.",
         "examples": [
             "Verify that a denominator is not zero before dividing:\n\nif(denominator != 0)\n{\n    quotient = numerator / denominator;\n}\nelse\n{\n    cout << \"Cannot divide by zero.\" << endl;\n}",
             "Verify that an output file opened successfully:\n\noutFile.open(\"report.txt\");\n\nif(outFile.is_open())\n{\n    outFile << report;\n    outFile.close();\n}\nelse\n{\n    cout << \"Unable to open report.txt.\" << endl;\n}"
@@ -3834,7 +3827,6 @@
             "Next iteration"
         ],
         "description": "An iteration is a single execution, or pass, through the body of a loop. Each time the loop body executes, one iteration has been completed.\n\nA loop may execute zero, one, or many iterations depending on the type of loop and whether its condition evaluates to true.\n\nDuring each iteration, the statements within the loop body execute, the loop control variable is typically updated, and the loop condition is evaluated to determine whether another iteration should occur.\n\nFor a while loop and a for loop, the condition is evaluated before each iteration begins. For a do-while loop, the condition is evaluated after each iteration completes.\n\nA loop terminates when its condition becomes false. The number of iterations executed depends on the loop's control components and the data being processed.\n\nThe word iteration describes a single repetition of a loop. The process of repeatedly executing statements is called iteration.",
-        "syntax": "There is no syntax to show for iteration.",
         "examples": [
             "Example 1: A while loop executes five iterations.\n\nint count = 1;\n\nwhile(count <= 5)\n{\n    cout << count << endl;\n    count++;\n}\n\nThe loop body executes five times, so the loop performs five iterations.",
             "Example 2: A for loop executes three iterations.\n\nfor(int number = 1; number <= 3; number++)\n{\n    cout << number << endl;\n}\n\nThe loop body executes three times, so the loop performs three iterations."
@@ -3882,7 +3874,6 @@
             "Arguments",
             "Return Values",
             "Return Statement",
-            "Void",
             "Pass by Value",
             "Pass by Reference",
             "Default Arguments",
@@ -3918,7 +3909,6 @@
             "Return Type",
             "Return Statement",
             "Return Values",
-            "Void",
             "Parameters",
             "Arguments",
             "Pass by Value",
@@ -3932,11 +3922,38 @@
         ]
     },
     {
+        "topic": "Function Signature",
+        "keywords": [
+            "Function signature",
+            "Function signatures",
+            "Signature",
+            "Function identifier",
+            "Function parameter types",
+            "Signature of a function"
+        ],
+        "description": "A function signature identifies a function by its name and the types of its parameters.\n\nFunction signatures are important because C++ can have multiple functions with the same name when their parameter lists are different. This is called function overloading.\n\nThe number, types, and order of the parameters can distinguish one overloaded function from another.\n\nThe return type is not used by itself to distinguish overloaded functions. Two functions cannot be overloaded if their only difference is the return type.\n\nParameter names are also not part of the function signature. The parameter types are what matter when distinguishing overloaded functions.",
+        "syntax": "functionName(parameterTypes)",
+        "examples": [
+            "These functions have different signatures:\nvoid display(int value);\nvoid display(double value);\nvoid display(int value, int count);\n\nTheir signatures can be represented as:\ndisplay(int)\ndisplay(double)\ndisplay(int, int)",
+            "Changing only the return type does not create a valid overload:\nint getValue();\ndouble getValue();\n\nThese cannot both be defined because the parameter lists are the same."
+        ],
+        "relatedTopics": [
+            "Functions",
+            "Function Prototypes",
+            "Parameters",
+            "Function Overloading",
+            "Return Types",
+            "Function Name",
+            "Parameter List"
+        ]
+    },
+    {
         "topic": "Return Type",
         "keywords": [
             "Return type",
             "Function return type",
-            "Returned type"
+            "Returned type",
+            "Function return types"
         ],
         "description": "The return type specifies the type of value a function returns to the calling function.\n\nIf a function does not return a value, its return type is void.\n\nThe return type appears at the beginning of both the function prototype and the function definition.\n\nThe value returned by the function must match its declared return type.",
         "syntax": "returnType functionName(parameterList);",
@@ -3947,11 +3964,30 @@
         "relatedTopics": [
             "Functions",
             "Function Components",
-            "Void",
             "Return Statement",
             "Return Values",
             "Function Prototypes",
-            "Function Definitions"
+            "Function Definitions",
+            "Function Signature"
+        ]
+    },
+    {
+        "topic": "Return Values",
+        "keywords": [
+            "Return value",
+            "Return values",
+            "Returning a value",
+            "Returned value",
+            "Function return value",
+            "Function return values"
+        ],
+        "description": "A return value is a value that a function sends back to the statement that called the function.\n\nA function that returns a value has a return type that specifies the type of value the function will return. For example, a function with a return type of int returns an integer value, while a function with a return type of double returns a floating-point value.\n\nThe return statement is used to send a value back from the function. The returned value can be stored in a variable, used in an expression, displayed, passed to another function, or used anywhere else a compatible value can be used.\n\nA function can return only one value directly each time it is called. However, that value can be a more complex type, such as a structure, object, or container that contains multiple pieces of data.\n\nA void function does not return a value to the calling statement.",
+        "relatedTopics": [
+            "Functions",
+            "Return Statement",
+            "Function Prototypes",
+            "Function Definitions",
+            "Data Types"
         ]
     },
     {
@@ -3959,7 +3995,8 @@
         "keywords": [
             "Function name",
             "Name of a function",
-            "Function identifier"
+            "Function identifier",
+            "Name of function"
         ],
         "description": "The function name identifies the function. It is used to call the function from another part of the program.\n\nFunction names should clearly describe the task the function performs.\n\nLike variable names, function names should follow the rules for valid identifiers.",
         "syntax": "returnType functionName(parameterList);",
@@ -3971,7 +4008,8 @@
             "Identifiers",
             "Naming Conventions",
             "Function Calls",
-            "Function Components"
+            "Function Components",
+            "Function Signature"
         ]
     },
     {
@@ -3980,7 +4018,8 @@
             "Parameter list",
             "Parameter lists",
             "List of parameters",
-            "Function parameters"
+            "Function parameters",
+            "Function parameter list"
         ],
         "description": "The parameter list specifies the information a function receives from the calling function.\n\nA function may have zero, one, or multiple parameters.\n\nEach parameter includes both a data type and a variable name.\n\nThe parameter list appears inside the parentheses following the function name.",
         "syntax": "returnType functionName(type parameter, ...);",
@@ -3996,7 +4035,8 @@
             "Pass by Value",
             "Pass by Reference",
             "Default Arguments",
-            "Arguments vs Parameters"
+            "Arguments vs Parameters",
+            "Function Signature"
         ]
     },
     {
@@ -4037,7 +4077,6 @@
             "Function Components",
             "Return Type",
             "Return Values",
-            "Void",
             "Function Definitions"
         ]
     },
@@ -4066,7 +4105,6 @@
             "Arguments",
             "Return Values",
             "Return Statement",
-            "Void",
             "Arguments vs Parameters"
         ]
     },
@@ -4160,12 +4198,12 @@
         "topic": "Function Prototypes",
         "keywords": [
             "Function prototype",
-            "Function prototypes",
             "Prototype",
             "Forward declaration",
             "Function declaration",
             "Declare a function",
-            "Prototype declaration"
+            "Prototype declaration",
+            "Function declarations"
         ],
         "description": "A function prototype is a declaration that tells the compiler a function exists before it is called. The prototype specifies the function's return type, name, and parameter list, but it does not contain the function body.\n\nFunction prototypes allow functions to be called before their definitions appear in the program. Without a prototype, the compiler would not know the function's name, return type, or parameters when it encounters the function call.\n\nIn this course, function prototypes are placed after the global variables and before the main() function as part of the standard program structure.\n\nEvery function definition should have one corresponding prototype. The prototype and the function definition must have the same return type, function name, and parameter list.\n\nA function prototype ends with a semicolon because it is a declaration, not a function definition.\n\nAlthough function prototypes are not always required in C++, they are required in this course. Understanding function prototypes prepares students for future topics such as header and implementation files, classes and objects, and modular program design. Using prototypes consistently also promotes good program organization and reinforces the standard program structure used throughout this course.\n\nParameter names are optional in a function prototype because the compiler only needs the data types to verify function calls. If parameter names are included, they do not have to match the names used in the function definition, although the data types, order, and number of parameters must be identical.\n\nFor Professor Raymond's class, function prototypes should include only the parameter data types and should not include parameter names. Omitting the parameter names emphasizes that a function prototype declares only the function's interface, while the function definition provides the implementation.",
         "syntax": "returnType functionName(parameterList);",
@@ -4185,7 +4223,8 @@
             "Return Type",
             "Return Statement",
             "Program Structure",
-            "main()"
+            "main()",
+            "Function Signature"
         ]
     },
     {
@@ -4202,10 +4241,6 @@
             "Function sequence"
         ],
         "description": "The function life cycle describes the compile-time and run-time events associated with declaring, defining, calling, executing, and returning from a function.\n\nThe function prototype and function definition are examined by the compiler during compile time. They do not execute. The function's run-time execution begins only when the function is called.\n\nFunction Life Cycle\n\nCompile Time\n|\n|-- Function Prototype\n|      Declares the function's return type, name, and parameter types.\n|\n\\-- Function Definition\n       Provides the function body that implements the function.\n\nRun Time\n|\n|-- Function Call\n|      Transfers program control to the called function.\n|\n|-- Arguments Assigned to Parameters\n|      Argument values are assigned to the corresponding parameters.\n|\n|-- Function Executes\n|      Statements in the function body execute in sequence.\n|\n|-- Return Statement\n|      Ends the function and returns a value when required.\n|\n\\-- Control Returns to the Calling Function\n       Execution resumes where the function call occurred.\n\nEach time a function is called, a new execution of the function begins. Its parameters and local variables are created when the function begins executing and are destroyed when the function ends.\n\nA function may be called multiple times. Each call begins a separate execution of the function with its own parameters and local variables.",
-        "syntax": "There is no specific syntax for the function life cycle. It describes the compile-time and run-time events associated with using a function.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Functions",
             "Function Components",
@@ -4355,6 +4390,8 @@
         "topic": "Pass by Value",
         "keywords": [
             "Pass by value",
+            "Pass-by-value",
+            "Passed-by-value",
             "Passed by value",
             "Value parameter",
             "Value parameters",
@@ -4377,14 +4414,15 @@
             "Function Prototypes",
             "Function Definitions",
             "Local Variables",
-            "Scope",
-            "Copies"
+            "Scope"
         ]
     },
     {
         "topic": "Pass by Reference",
         "keywords": [
             "Pass by reference",
+            "Pass-by-reference",
+            "Passed-by-reference",
             "Passed by reference",
             "Reference parameter",
             "Reference parameters",
@@ -4401,7 +4439,6 @@
         ],
         "relatedTopics": [
             "Pass by Value",
-            "References",
             "Arguments vs Parameters",
             "Parameters",
             "Arguments",
@@ -4409,8 +4446,7 @@
             "Function Prototypes",
             "Function Definitions",
             "Void Functions",
-            "Scope",
-            "Ampersand"
+            "Scope"
         ]
     },
     {
@@ -4427,10 +4463,6 @@
             "Code organization"
         ],
         "description": "Modular programming is the practice of dividing a program into smaller, independent parts called modules. In a C++ program, functions are commonly used as modules.\n\nEach module should perform one specific, well-defined task. For example, separate functions may be used to display a menu, receive input, perform calculations, validate data, save information to a file, or display results.\n\nBreaking a large problem into smaller tasks is called program decomposition. Each task can then be designed, written, tested, and debugged separately before being combined into the complete program.\n\nModular programming improves:\n- Organization, because related statements are grouped together.\n- Readability, because each function has a clear purpose.\n- Testing and debugging, because individual functions can be examined separately.\n- Maintenance, because changes can often be made within one function.\n- Code reuse, because a function can be called whenever its task is needed.\n\nA well-designed function should normally perform one primary task. If a function performs many unrelated tasks, it may need to be divided into smaller functions.\n\nThe main() function should provide the overall flow of the program and call other functions to perform the detailed tasks. Placing most of the program's work in appropriately named functions makes main() easier to read and understand.\n\nAs programs become larger, modular design may also use header files, implementation files, structures, classes, and objects to organize related data and behavior.",
-        "syntax": "There is no syntax for modular programming.",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Functions",
             "Program Design",
@@ -4482,7 +4514,6 @@
             "Local Variables",
             "Global Variables",
             "Block Scope",
-            "Lifetime",
             "If Structure",
             "Loops"
         ]
@@ -4562,7 +4593,6 @@
         "topic": "Instance Variables",
         "keywords": [
             "Instance variable",
-            "Instance variables",
             "Member variable",
             "Member variables",
             "Data members",
@@ -4584,14 +4614,16 @@
         ]
     },
     {
-        "topic": "Header Files",
+        "topic": "User-Defined Header Files",
         "keywords": [
-            "Header files",
             "User-defined header file",
             "User defined header file",
+            "Header and Implementation Files",
+            "Header and Implementation File",
             ".hpp",
             ".h",
             "Specification file",
+            "Specification files",
             "Class specification",
             "Function prototypes"
         ],
@@ -4608,7 +4640,6 @@
             "Instance Variables",
             "Modular Programming",
             "Abstraction",
-            "#include",
             "Include Guards"
         ]
     },
@@ -4618,7 +4649,6 @@
             "Implementation file",
             "Implementation files",
             ".cpp",
-            "Source file",
             "Function definitions",
             "Class implementation"
         ],
@@ -4686,7 +4716,6 @@
             "Computer-generated random numbers"
         ],
         "description": "Pseudo-random numbers are values generated by a mathematical algorithm that appear to be random. They are called pseudo-random because they are generated by a predictable process rather than by a truly random event.\n\nThe random number generator produces a long sequence of numbers. Each call to rand() returns the next number in that sequence.\n\nThe sequence can be thought of as a very long list of numbers, although the numbers are actually calculated by an algorithm rather than stored in a list.\n\nIf the generator begins with the same seed, it produces the same sequence. Changing the seed causes the generator to begin with a different sequence of values.\n\nThe values returned directly by rand() may be very large. The modulo operator is commonly used to reduce those values to a smaller range.\n\nFor example, rand() % 10 produces values from 0 through 9 because the remainder after division by 10 can only be 0 through 9.",
-        "syntax": "There is no syntax for pseudo-random numbers. ",
         "examples": [
             "Limiting a pseudo-random number with the modulo operator:\n\nrand() % 10\n\nPossible results:\n0, 1, 2, 3, 4, 5, 6, 7, 8, or 9",
             "Another modulo range:\n\nrand() % 6\n\nPossible results:\n0, 1, 2, 3, 4, or 5"
@@ -4697,11 +4726,9 @@
             "rand()",
             "srand()",
             "Modulo Operator",
-            "Remainder",
             "<cstdlib>",
             "<ctime>",
-            "Loops",
-            "Guessing Games"
+            "Loops"
         ]
     },
     {
@@ -4731,12 +4758,9 @@
             "Seeding the Random Number Generator",
             "srand()",
             "Modulo Operator",
-            "RAND_MAX",
             "<cstdlib>",
-            "Integers",
             "Expressions",
-            "Loops",
-            "Guessing Games"
+            "Loops"
         ]
     },
     {
@@ -4769,10 +4793,6 @@
             "Pseudo-Random Numbers",
             "Random Numbers",
             "rand()",
-            "Seed",
-            "time()",
-            "time_t",
-            "nullptr",
             "Type Casting",
             "<cstdlib>",
             "<ctime>",
@@ -4826,13 +4846,10 @@
             "Array variable",
             "Collection of values",
             "Fixed-size collection",
-            "Fixed size collection"
+            "Fixed size collection",
+            "Array index"
         ],
         "description": "An array is a collection of multiple values of the same data type stored under a single variable name.\n\nEach value stored in an array is called an element. Individual elements are accessed using an index, which represents the element's position within the array.\n\nC++ arrays use zero-based indexing. This means that the first element has an index of 0, the second element has an index of 1, and so on. An array containing n elements has valid indexes from 0 through n - 1.\n\nFor example, an array containing five elements can be visualized as:\n\nIndex:      0      1      2      3      4\n          +------+------+------+------+------+\nElement:  |  85  |  92  |  78  |  96  |  88  |\n          +------+------+------+------+------+\n\nAll elements in an array must have the same data type. For example, an int array stores only integers, while a double array stores only double values.\n\nThe size of a traditional C++ array is established when the array is declared and cannot be changed while the program is running.\n\nArrays are useful when a program needs to store and process a group of related values, such as test scores, temperatures, prices, or other collections of data.\n\nLoops are commonly used with arrays because the index can be changed during each iteration to process each element in sequence.\n\nUnlike a single variable, which stores one value, an array allows many related values to be stored and accessed using one variable name and different indexes.",
-        "syntax": "There is no syntax to show for arrays",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Array Components",
             "Array Declaration",
@@ -4840,9 +4857,7 @@
             "Array Elements",
             "Array Bounds",
             "Array Traversal",
-            "Arrays and Loops",
             "Arrays and Functions",
-            "Partially Filled Arrays",
             "Parallel Arrays",
             "Multidimensional Arrays",
             "Searching Arrays",
@@ -4937,8 +4952,6 @@
             "Declaring and Initializing Arrays",
             "Array Bounds",
             "Array Traversal",
-            "Arrays and Loops",
-            "Indexes",
             "Expressions"
         ]
     },
@@ -5104,9 +5117,44 @@
             "Assignment Operator",
             "copy()",
             "copy_n()",
-            "begin()",
-            "end()",
             "<algorithm>"
+        ]
+    },
+    {
+        "topic": "Indexing",
+        "keywords": [
+            "Indexing",
+            "Index",
+            "Indexes",
+            "Index value",
+            "Index values",
+            "Zero-based indexing",
+            "Zero based indexing",
+            "Element index",
+            "Element position",
+            "Array indexing",
+            "String indexing",
+            "Vector indexing",
+            "Zero based index",
+            "Zero-based index"
+        ],
+        "description": "Indexing is the use of a numeric position to access an individual element in a collection of data, such as an array, vector, or string.\n\nC++ uses zero-based indexing, which means the first element is at index 0, the second element is at index 1, and so on.\n\nFor a collection containing size elements, the last valid index is size - 1. For example, a collection containing 5 elements has indexes 0 through 4.\n\nAn index can be a literal integer, a variable, or an integer expression that evaluates to a valid position.\n\nAttempting to access an index outside the valid range can result in incorrect behavior or a run-time error, depending on how the element is accessed.",
+        "syntax": "collectionName[index]",
+        "examples": [
+            "Access elements of an array using indexes:\nint scores[5] = {90, 85, 78, 92, 88};\n\ncout << scores[0];   // first element\ncout << scores[4];   // last element",
+            "Use a variable as an index:\nint index = 2;\ncout << scores[index];",
+            "A vector also uses zero-based indexing:\nvector<int> numbers = {10, 20, 30};\ncout << numbers[0];   // displays 10"
+        ],
+        "relatedTopics": [
+            "Arrays",
+            "Vectors",
+            "Strings",
+            "Array Indexes",
+            "Accessing Vector Elements",
+            "String character access",
+            "Array Traversal",
+            "Vector Traversal",
+            "Bounds Checking"
         ]
     },
     {
@@ -5118,6 +5166,7 @@
             "Sequential searching",
             "Search an array",
             "Searching an array",
+            "Searching arrays",
             "Find value in array",
             "Find an array element"
         ],
@@ -5195,11 +5244,8 @@
             "Arrays",
             "Array Traversal",
             "Sorting Arrays",
-            "begin()",
-            "end()",
             "<algorithm>",
-            "Iterators",
-            "Boolean Values"
+            "Boolean Expressions"
         ]
     },
     {
@@ -5215,10 +5261,6 @@
             "Descending order"
         ],
         "description": "Sorting an array is the process of arranging its elements into a specified order.\n\nNumeric data is commonly sorted into ascending order, from smallest to largest, or descending order, from largest to smallest. String data can also be sorted alphabetically.\n\nSorting data can make it easier to display, organize, search, and analyze. Some algorithms, such as binary search, require the data to be sorted before the algorithm can be used.\n\nThere are many different sorting algorithms. In this course, bubble sort and selection sort are used to demonstrate how sorting algorithms work.\n\nBubble sort repeatedly compares adjacent elements and swaps them when they are out of order. Selection sort repeatedly finds the smallest remaining element and moves it into its correct position.\n\nThe C++ Standard Library also provides the sort() function, which can sort a range of elements without requiring the programmer to write the sorting algorithm.\n\nAlthough library functions are normally preferred when writing programs, understanding sorting algorithms such as bubble sort and selection sort helps develop an understanding of algorithms, comparisons, swapping values, nested loops, and efficiency.",
-        "syntax": "There is no syntax to show for sorting",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Arrays",
             "Bubble Sort",
@@ -5226,7 +5268,6 @@
             "sort()",
             "Array Traversal",
             "Nested Loops",
-            "Swapping Values",
             "Binary Search",
             "Algorithms"
         ]
@@ -5253,7 +5294,6 @@
             "Arrays",
             "Nested Loops",
             "For Loop",
-            "Swapping Values",
             "Comparison Operators",
             "Algorithms"
         ]
@@ -5282,7 +5322,6 @@
             "Array Traversal",
             "Nested Loops",
             "For Loop",
-            "Swapping Values",
             "Comparison Operators",
             "Algorithms"
         ]
@@ -5312,8 +5351,6 @@
             "Bubble Sort",
             "Selection Sort",
             "Arrays",
-            "begin()",
-            "end()",
             "<algorithm>",
             "Binary Search",
             "Standard Library Search Functions"
@@ -5332,10 +5369,6 @@
             "<vector>"
         ],
         "description": "A vector is a C++ Standard Library container that stores a collection of values of the same data type.\n\nVectors are similar to arrays because their elements are stored in sequence and are accessed using indexes beginning at 0.\n\nUnlike a traditional array, however, a vector can change its number of elements while the program is running. Elements can be added or removed as needed.\n\nA vector keeps track of its own size. The size() function returns the number of elements currently stored in the vector.\n\nVectors also maintain a capacity, which represents the amount of storage currently available before additional memory must be allocated. The capacity may be greater than the vector's size.\n\nFor example, a vector containing five values can be visualized as:\n\nIndex:      0      1      2      3      4\n          +------+------+------+------+------+\nElement:  |  85  |  92  |  78  |  96  |  88  |\n          +------+------+------+------+------+\n\nVectors provide member functions that make many common operations easier, including adding elements, removing elements, checking the number of elements, and managing storage.\n\nSome of the common functions used with vectors can be organized by their purpose:\n\nVector Size and Resizing\n├── size()          → reports number of elements\n├── resize()        → changes number of elements\n└── clear()         → removes all elements\n\nVector Capacity and Reserving\n├── capacity()      → reports current capacity\n├── reserve()       → requests additional capacity\n└── shrink_to_fit() → requests reduction of unused capacity\n\nAdding and Removing Vector Elements\n├── push_back()     → adds an element to the end\n├── pop_back()      → removes the last element\n├── insert()        → adds an element at a specified position\n└── erase()         → removes an element at a specified position\n\nVectors are provided by the <vector> header file.",
-        "syntax": "There is no syntax to show for vectors",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Vector Components",
             "Declaring and Initializing Vectors",
@@ -5348,11 +5381,37 @@
             "Range-Based For Loop",
             "push_back()",
             "pop_back()",
-            "Vector Functions",
             "Vectors and Functions",
             "Searching Vectors",
             "Sorting Vectors",
             "Arrays"
+        ]
+    },
+    {
+        "topic": "Vector Components",
+        "keywords": [
+            "Vector components",
+            "Components of a vector",
+            "Parts of a vector",
+            "Vector parts"
+        ],
+        "description": "A vector declaration contains several components that describe the vector and the type of data it stores.\n\nThe vector type identifies the container as a vector. The data type inside the angle brackets specifies the type of elements the vector can store, and the vector name identifies the vector in the program.\n\nA vector can be declared empty, given an initial size, or initialized with values. Unlike an array, a vector can change its size while the program is running.\n\nIndividual elements of a vector can be accessed using an index. Like arrays, vector indexes begin at 0, so the first element is at index 0 and the last element is at index size() - 1.",
+        "syntax": "vector<dataType> vectorName;\n\nvector<dataType> vectorName(size);\n\nvector<dataType> vectorName = {value1, value2, value3};\n\nvectorName[index]",
+        "examples": [
+            "Declare an empty vector of integers:\nvector<int> scores;",
+            "Declare a vector with an initial size of 5:\nvector<int> scores(5);",
+            "Declare and initialize a vector with values:\nvector<int> scores = {85, 92, 78, 96, 88};",
+            "Access an element using its index:\ncout << scores[0];\n\nThe index 0 accesses the first element of the vector.",
+            "Identify the components of a vector declaration:\nvector<double> prices;\n\nvector        → vector type\ndouble        → element data type\nprices        → vector name"
+        ],
+        "relatedTopics": [
+            "Vectors",
+            "Declaring Vectors",
+            "Initializing Vectors",
+            "Vector Index",
+            "Vector Size",
+            "Vector Traversal",
+            "Array Components"
         ]
     },
     {
@@ -5423,8 +5482,30 @@
             "Vector Size",
             "size()",
             "Array Bounds",
-            "Accessing Array Elements",
-            "Exceptions"
+            "Accessing Array Elements"
+        ]
+    },
+    {
+        "topic": "Vector Traversal",
+        "keywords": [
+            "Vector traversal",
+            "Traversing vectors",
+            "Traverse vector",
+            "Traverse a vector",
+            "Loop through vector",
+            "Loop through a vector",
+            "Iterate through vector",
+            "Iterate through a vector"
+        ],
+        "description": "Vector traversal means accessing the elements of a vector one at a time, typically from the beginning of the vector to the end.\n\nTraversing a vector is similar to traversing an array. A traditional for loop can use an index to access each element of the vector. A while loop or other loop can also be used when appropriate.\n\nVectors can also be traversed using a range-based for loop, which accesses each element without requiring an index. Iterators provide another way to move through the elements of a vector.\n\nThe choice of traversal method depends on what the program needs to do. An index-based loop is useful when the element's position is needed, while a range-based for loop is convenient when each element simply needs to be processed. Iterators are commonly used with Standard Library functions and algorithms.\n\nBecause basic traversal using loops is covered with arrays and looping structures, those topics can be used for additional information about the traversal process.",
+        "relatedTopics": [
+            "Vectors",
+            "Array Traversal",
+            "For Loops",
+            "While Loops",
+            "Range-Based For Loop",
+            "Searching Vectors",
+            "Sorting Vectors"
         ]
     },
     {
@@ -5457,9 +5538,7 @@
             "Vector Traversal",
             "size()",
             "at()",
-            "For Loop",
-            "Exceptions",
-            "Undefined Behavior"
+            "For Loop"
         ]
     },
     {
@@ -5477,10 +5556,6 @@
             "Dynamic array"
         ],
         "description": "Dynamic resizing is the ability of a vector to change the number of elements it contains while a program is running.\n\nUnlike a traditional array, whose size is fixed when it is created, a vector can grow or shrink as elements are added or removed.\n\nA vector keeps track of both its size and its capacity. The size represents the number of elements currently stored in the vector. The capacity represents the number of elements the vector can currently store without allocating additional memory.\n\nA vector may therefore have a capacity that is larger than its size. The unused capacity provides room for additional elements without requiring new memory to be allocated every time an element is added.\n\nFor example:\n\nSize:      3\nCapacity:  5\n\n          +------+------+------+------+------+\nVector:   |  10  |  20  |  30  |      |      |\n          +------+------+------+------+------+\n             Elements        Available Space\n\nIf another element is added while unused capacity is available, the element can be placed in the existing storage and the vector's size increases.\n\nWhen an element is added and the vector no longer has enough capacity, the vector must allocate a larger block of memory. The existing elements are moved or copied into the new storage, the old storage is released, and the new element is added.\n\nThis process is called reallocation. Reallocation requires additional work, so vectors typically allocate more space than is immediately required. This allows several elements to be added before another reallocation is necessary.\n\nThe amount by which capacity increases is determined by the C++ implementation. A program should not assume that the capacity will increase by a particular amount or that it will always double.\n\nRemoving elements decreases the vector's size, but it does not necessarily decrease its capacity. The vector may keep the allocated storage available for elements that are added later.\n\nFunctions such as push_back(), pop_back(), and resize() can change the number of elements in a vector. The size() and capacity() functions can be used to examine the vector's current size and storage capacity.",
-        "syntax": "There is no syntax to show for vector dynamic resizing",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Vectors",
             "Vector Size vs Capacity",
@@ -5489,8 +5564,7 @@
             "push_back()",
             "pop_back()",
             "resize()",
-            "Vector Functions",
-            "Dynamic Memory",
+            "Vectors and Functions",
             "Arrays"
         ]
     },
@@ -5506,10 +5580,6 @@
             "capacity versus size"
         ],
         "description": "A vector's size and capacity describe two different properties of the vector.\n\nThe size is the number of elements that currently exist in the vector. The size() function returns this value.\n\nThe capacity is the number of elements the vector's currently allocated storage can hold before additional memory must be allocated. The capacity() function returns this value.\n\nThe capacity of a vector is always greater than or equal to its size, but the two values do not have to be equal.\n\nFor example:\n\nSize:      3\nCapacity:  5\n\n          +------+------+------+------+------+\nVector:   |  10  |  20  |  30  |      |      |\n          +------+------+------+------+------+\n             Elements        Available Storage\n\nThe first three locations contain vector elements and are included in the size. The two remaining locations represent available storage and are included in the capacity, but they are not currently vector elements and cannot be accessed as if they were.\n\nAdding an element increases the size. If sufficient capacity already exists, the capacity may remain unchanged. If the vector does not have enough capacity, additional storage is allocated and the capacity increases.\n\nRemoving elements decreases the size but does not normally decrease the capacity. The allocated storage may remain available for future elements.\n\nA useful way to remember the difference is:\nSize = how many elements exist.\nCapacity = how many elements can fit in the currently allocated storage.",
-        "syntax": "There is no syntax to show for Vector Size vs Capacity",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Vectors",
             "Vector Dynamic Resizing",
@@ -5602,8 +5672,7 @@
             "resize()",
             "clear()",
             "push_back()",
-            "pop_back()",
-            "Dynamic Memory"
+            "pop_back()"
         ]
     },
     {
@@ -5639,7 +5708,6 @@
             "Vector Size vs Capacity",
             "Vector Capacity and Reserving",
             "Accessing Vector Elements",
-            "begin()",
             "Vector Traversal"
         ]
     },
@@ -5648,7 +5716,7 @@
         "keywords": [
             "Vectors and functions",
             "Vector with functions",
-            "Vector function",
+            "Vectors and function",
             "Pass vector to function",
             "Passing vectors",
             "Vector parameter",
@@ -5673,43 +5741,6 @@
             "Arguments vs Parameters",
             "Pass-by-Value",
             "Pass-by-Reference",
-            "Constant Parameters",
-            "Value-Returning Functions",
-            "Vector Traversal",
-            "size()"
-        ]
-    },
-    {
-        "topic": "Vectors and Functions",
-        "keywords": [
-            "Vectors and functions",
-            "Vector with functions",
-            "Vector function",
-            "Pass vector to function",
-            "Passing vectors",
-            "Vector parameter",
-            "Vector argument",
-            "Return vector",
-            "Returning vectors"
-        ],
-        "description": "Vectors can be passed to functions as arguments, used as function parameters, and returned from functions.\n\nUnlike traditional arrays, vectors are passed by value by default. When a vector is passed by value, the function receives a copy of the vector. Changes made to the copy inside the function do not affect the original vector.\n\nThis is an important difference between vectors and traditional arrays. When a traditional array is passed to a function, changes made to its elements inside the function affect the original array. A vector does not behave this way unless it is explicitly passed by reference.\n\nA vector can be passed by reference by placing an ampersand (&) with the parameter type. When a vector is passed by reference, the function works with the original vector rather than a copy. Changes made to the vector inside the function therefore affect the original vector.\n\nIf a function only needs to read a vector and should not modify it, the vector can be passed by constant reference using const and &. This avoids copying the vector while also preventing the function from changing it.\n\nBecause a vector may contain many elements, passing a large vector by value requires copying those elements. Passing the vector by constant reference is commonly used when the function only needs to examine the vector.\n\nHowever, pass-by-reference should not be used automatically for every parameter. The method used should reflect what the function needs to do: use pass-by-value when a separate copy is appropriate, pass-by-reference when the function needs to modify the original vector, and pass-by-constant-reference when the function only needs to read the original vector without making a copy.\n\nUnlike traditional arrays, a vector knows its own size. A separate size parameter is therefore normally unnecessary because the function can use the vector's size() member function.\n\nVectors can also be returned from value-returning functions. The function's return type specifies the vector type being returned.",
-        "syntax": "Pass a vector by value:\n\nvoid functionName(vector<dataType> vectorName);\n\nPass a vector by reference:\n\nvoid functionName(vector<dataType> &vectorName);\n\nPass a vector by constant reference:\n\nvoid functionName(const vector<dataType> &vectorName);\n\nReturn a vector:\n\nvector<dataType> functionName();",
-        "examples": [
-            "Pass a vector by value:\n\nvoid changeValue(vector<int> numbers)\n{\n    numbers[0] = 100;\n}\n\nChanges made to numbers inside the function do not affect the original vector.",
-            "Pass a vector by reference:\n\nvoid changeValue(vector<int> &numbers)\n{\n    numbers[0] = 100;\n}\n\nChanges made to numbers inside the function affect the original vector.",
-            "Pass a vector by constant reference:\n\nvoid displayValues(const vector<int> &numbers)\n{\n    for(int index = 0; index < numbers.size(); index++)\n    {\n        cout << numbers[index] << endl;\n    }\n}\n\nThe function can access the original vector without copying it, but cannot change its elements.",
-            "Return a vector from a function:\n\nvector<int> createValues()\n{\n    vector<int> numbers = {10, 20, 30, 40, 50};\n\n    return numbers;\n}"
-        ],
-        "relatedTopics": [
-            "Vectors",
-            "Arrays and Functions",
-            "Functions",
-            "Parameters",
-            "Arguments",
-            "Arguments vs Parameters",
-            "Pass-by-Value",
-            "Pass-by-Reference",
-            "Constant Parameters",
             "Value-Returning Functions",
             "Vector Traversal",
             "size()"
@@ -5743,6 +5774,50 @@
             "Vector Size vs Capacity",
             "Pass-by-Value",
             "Pass-by-Reference"
+        ]
+    },
+    {
+        "topic": "Searching Vectors",
+        "keywords": [
+            "Searching vectors",
+            "Search vector",
+            "Search a vector",
+            "Vector search",
+            "Linear search vector",
+            "Binary search vector",
+            "find vector",
+            "binary_search vector"
+        ],
+        "description": "Vectors can be searched using the same general techniques used with arrays, including linear search, binary search, std::find(), and std::binary_search().\n\nThe logic of the search does not change simply because the values are stored in a vector instead of an array. For example, a linear search still examines elements one at a time until the desired value is found, and a binary search still requires the data to be sorted before the search begins.\n\nWhen using standard library search functions with a vector, the range is commonly specified using begin() and end().\n\nBecause the search algorithms themselves are covered in the array searching topics, refer to those topics for the full algorithms and examples.",
+        "relatedTopics": [
+            "Linear Search",
+            "Binary Search",
+            "std::find()",
+            "std::binary_search()",
+            "Vectors",
+            "Vector Traversal",
+            "Sorting Vectors"
+        ]
+    },
+    {
+        "topic": "Sorting Vectors",
+        "keywords": [
+            "Sorting vectors",
+            "Sort vector",
+            "Sort a vector",
+            "Vector sorting",
+            "Bubble sort vector",
+            "Selection sort vector",
+            "std::sort vector"
+        ],
+        "description": "Vectors can be sorted using the same general sorting techniques used with arrays, including bubble sort, selection sort, and the std::sort() function.\n\nThe logic of bubble sort and selection sort is the same when working with a vector because vector elements can be accessed by index in much the same way as array elements.\n\nWhen using std::sort() with a vector, begin() and end() are commonly used to specify the range of elements to sort.\n\nBecause the sorting algorithms themselves are covered in the array sorting topics, refer to those topics for the full algorithms and examples.",
+        "relatedTopics": [
+            "Bubble Sort",
+            "Selection Sort",
+            "sort()",
+            "Vectors",
+            "Vector Traversal",
+            "Searching Vectors"
         ]
     },
     {
@@ -5787,10 +5862,6 @@
             "Replace parallel arrays with structures"
         ],
         "description": "Parallel arrays and structures can both be used to organize related data, but they organize that data in different ways.\n\nParallel arrays store each attribute in a separate array. The relationship between the values is maintained by their indexes. Values at the same index represent information about the same object.\n\nFor example:\n\nParallel Arrays\n\nIndex       names        grades\n  0         Alex           92\n  1         Jordan         85\n  2         Taylor         96\n\nnames[0] and grades[0] describe Alex, while names[1] and grades[1] describe Jordan. The programmer must make sure that the indexes of the parallel arrays remain synchronized.\n\nStructures organize the data differently. Instead of grouping all names together and all grades together, a structure groups all of the information describing one object together.\n\nStructures\n\nstudents[0]\n├── name  → Alex\n└── grade → 92\n\nstudents[1]\n├── name  → Jordan\n└── grade → 85\n\nstudents[2]\n├── name  → Taylor\n└── grade → 96\n\nWith parallel arrays, the relationship between values is based on matching indexes. With structures, the related values are members of the same structure variable.\n\nStructures often make programs easier to understand and maintain because the data describing an object is kept together. Adding another attribute, such as a student's major, requires adding another parallel array when using parallel arrays. With a structure, another member can be added to the structure definition.\n\nParallel arrays can still be appropriate for simple programs or situations where separate collections of individual values are useful. Structures are generally more appropriate when several related values together represent a single object or record.\n\nParallel Arrays vs Structures\n\nParallel Arrays\n├── Each attribute is stored in a separate array\n├── Related values are connected by matching indexes\n├── Arrays must remain synchronized\n├── Adding an attribute requires another array\n└── Useful for simple collections of related data\n\nStructures\n├── Related attributes are grouped into one data type\n├── Each object contains its own related values\n├── Relationships do not depend on separate arrays staying synchronized\n├── Adding an attribute means adding another structure member\n└── Useful when multiple values describe one object or record",
-        "syntax": "There is no syntax to show for Structures vs Parallel Arrays",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Structures",
             "Parallel Arrays",
@@ -5815,7 +5886,8 @@
             "Create structure",
             "Create a structure",
             "struct definition",
-            "struct declaration"
+            "struct declaration",
+            "structure members"
         ],
         "description": "Defining a structure creates a new user-defined data type that groups related variables together. A structure is defined using the struct keyword, followed by the name of the structure and a set of braces containing its members.\n\nEach member is declared with its own data type and name. The members of a structure can have different data types because they represent different attributes of the same type of object or record.\n\nThe structure definition ends with a semicolon after the closing brace. Forgetting this semicolon is a common syntax error.\n\nDefining a structure does not create a variable or store data for an individual object. It defines the structure and members that variables of that type will contain.\n\nFor example, defining a Student structure creates a new Student data type. A separate declaration is then used to create a variable of the Student type.\n\nThe terms defining and declaring are sometimes confused. Defining a structure describes the new data type and its members. Declaring a structure variable creates a variable of that type.",
         "syntax": "struct StructureName\n{\n    dataType memberName;\n    dataType memberName;\n};",
@@ -5851,6 +5923,7 @@
             "Declare and initialize structure variable",
             "Struct variable",
             "Initializer list",
+            "Initializer lists",
             "Designated initializer",
             "Designated initializers"
         ],
@@ -5872,6 +5945,48 @@
             "Designated Initializers",
             "User-Defined Data Types",
             "Data Types"
+        ]
+    },
+    {
+        "topic": "Accessing Structure Members",
+        "keywords": [
+            "Access structure members",
+            "Accessing struct members",
+            "Access struct members",
+            "Structure members",
+            "Struct members",
+            "Dot operator",
+            "Structure dot operator"
+        ],
+        "description": "The members of a structure are accessed using the structure variable's name followed by the dot operator (.) and the name of the member.\n\nEach member can be accessed individually and used much like a regular variable. A structure member can be assigned a value, displayed, used in an expression, or passed to a function.\n\nIf multiple variables are declared from the same structure, each structure variable has its own members. The structure variable name identifies which object's data is being accessed.",
+        "syntax": "structureVariable.memberName",
+        "examples": [
+            "Assign values to members of a Student structure variable:\nstudent1.name = \"Alex\";\nstudent1.id = 12345;\nstudent1.gpa = 3.75;",
+            "Display members of a Student structure variable:\ncout << student1.name << endl;\ncout << student1.id << endl;\ncout << student1.gpa << endl;",
+            "Use a structure member in an expression:\nif (student1.gpa >= 3.5)\n{\n    cout << \"Dean's List\" << endl;\n}"
+        ],
+        "relatedTopics": [
+            "Structures",
+            "Defining Structures",
+            "Declaring and Initializing Structure Variables",
+            "Dot Operator",
+            "Structure Members"
+        ]
+    },
+    {
+        "topic": "Dot Operator",
+        "keywords": [
+            "Dot operators",
+            "Member access operator",
+            "Member access",
+            "Access members"
+        ],
+        "description": "The dot operator (.) is used to access a member of a structure or object.\n\nThe name of the structure variable or object is placed before the dot, and the name of the member being accessed is placed after the dot.\n\nThe dot operator can be used to access member variables and, with objects, call public member functions.\n\nFor more information about using the dot operator, see Accessing Structure Members and Member Functions.",
+        "relatedTopics": [
+            "Accessing Structure Members",
+            "Member Functions",
+            "Structures",
+            "Classes and Objects"
         ]
     },
     {
@@ -5973,13 +6088,10 @@
             "OOP",
             "User-defined data type",
             "Instance",
+            "Instances",
             "Instance of a class"
         ],
         "description": "A class is a user-defined data type that groups related data and the functions that operate on that data into a single unit. Classes are one of the fundamental concepts of object-oriented programming (OOP).\n\nThe data stored within a class describes the characteristics or state of an object. These variables are commonly called data members, member variables, or instance variables. The functions defined for a class describe the behaviors or operations that objects of the class can perform and are called member functions.\n\nA class defines what data and behaviors objects of that type will have, but defining a class does not create an object. An object is an individual instance of a class.\n\nFor example, a Student class might describe students using a name, student ID, and grade, along with functions for displaying or modifying that information.\n\nThe relationship between a class and its objects can be visualized as:\n\nStudent Class\n├── Data\n│   ├── name\n│   ├── studentID\n│   └── grade\n│\n└── Behaviors\n    ├── displayStudent()\n    └── updateGrade()\n\n                 ↓ creates objects of this type\n\nstudent1\n├── name      → Alex\n├── studentID → 1001\n└── grade     → 92.5\n\nstudent2\n├── name      → Jordan\n├── studentID → 1002\n└── grade     → 85.0\n\nBoth student1 and student2 are objects of the Student class. Each object has its own values for the instance variables, while both objects have the behaviors defined by the Student class.\n\nA common way to think about the relationship is that a class acts as a blueprint or definition for a type of object, while an object is a specific instance created from that definition.\n\nClasses are similar to structures because both can group related data into a user-defined data type. Classes extend this idea by commonly combining the data describing an object with the functions that operate on that data.\n\nClasses also support concepts such as encapsulation and data hiding. The internal data of an object can be protected from direct access, while member functions provide controlled ways to interact with that data. This allows the class to separate how an object is used from the details of how it is implemented.\n\nClasses allow programs to model related data and behavior as objects, helping organize larger programs into meaningful and reusable components.",
-        "syntax": "There is no syntax to show for classes and objects",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Object-Oriented Programming",
             "Defining Classes",
@@ -6015,10 +6127,6 @@
             "Classes are upgraded structures"
         ],
         "description": "Structures and classes are both used to group related data into organized, user-defined data types. Structures provide a major improvement over approaches such as parallel arrays because all of the information describing one object can be stored together.\n\nFor example, a Student structure might group a student's name, ID, GPA, and degree program into one organized unit rather than storing each piece of information in a separate parallel array.\n\nClasses build on this same idea. A class can be thought of as an upgraded structure. Like a structure, a class groups related data together, but a class also groups the functions that operate on that data with the object itself.\n\nFor example, a Student structure could store a student's information, but functions used to calculate honors status, update a transcript, or display student information would normally be separate from the structure. With a class, those related functions can become part of the Student type itself.\n\nCombining related data and behavior into the same type is one of the central ideas of object-oriented programming (OOP). It allows programs to model real-world objects more naturally and helps keep related code organized and easier to maintain.\n\nWhen moving from structures to classes, many ideas remain familiar. Both structures and classes can contain fields, also called attributes or member variables, that describe the data associated with an object.\n\nClasses also contain functions, commonly called methods or member functions, that describe what an object can do. These functions operate on the data that belongs to the object.\n\nClasses also allow access to data and functions to be controlled using public and private sections. This allows the programmer to protect internal data and provide controlled ways for other parts of the program to interact with an object.\n\nClasses can also provide more control over how objects are created, copied, and destroyed, making them well suited for larger and more complex software systems.",
-        "syntax": "There is no syntax to show for Structures vs Classes",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Structures",
             "Classes and Objects",
@@ -6039,6 +6147,33 @@
         ]
     },
     {
+        "topic": "Object vs. Class",
+        "keywords": [
+            "Object vs class",
+            "Class vs object",
+            "Difference between object and class",
+            "Difference between class and object",
+            "Object and class",
+            "Class and object",
+            "Class instance",
+            "Instance of a class"
+        ],
+        "description": "A class is a user-defined data type that describes the data and functions that objects of that type can have. An object is a variable, or instance, created from a class.\n\nA class acts as the definition for a type, while an object is a specific instance of that type created in a program.\n\nMultiple objects can be created from the same class. Each object has its own copy of the class's non-static member variables, so the objects can store different values while sharing the same class definition.\n\nA simple way to remember the difference is: the class defines the type; an object is an instance of that type.",
+        "syntax": "ClassName objectName;",
+        "examples": [
+            "Student is the class type, while student1 and student2 are objects of that class:\nStudent student1;\nStudent student2;"
+        ],
+        "relatedTopics": [
+            "Classes and Objects",
+            "Defining a Class",
+            "Declaring and Initializing Objects",
+            "Instance Variables",
+            "Member Functions",
+            "User-Defined Data Types",
+            "Constructors"
+        ]
+    },
+    {
         "topic": "Class Components",
         "keywords": [
             "Class components",
@@ -6049,17 +6184,10 @@
             "Class members"
         ],
         "description": "A class is made up of several components that define the data an object stores and the behaviors that objects of the class can perform.\n\nIn this course, a class is separated into a specification file and an implementation file. The specification file (.hpp or .h) describes what the class contains and what it can do, while the implementation file (.cpp) contains the definitions that describe how its member functions perform their operations.\n\nThe major components of a class include the class name, access specifiers, instance variables, constructors, and member functions. These components are organized between the specification and implementation files.\n\nClass\n|\n|-- Specification File (.hpp / .h)\n|   |\n|   |-- Class Name\n|   |      Identifies the user-defined data type.\n|   |\n|   |-- Access Specifiers\n|   |      Control access to members of the class.\n|   |\n|   |-- Instance Variables\n|   |      Store the data that describes each object.\n|   |\n|   |-- Constructor Prototypes\n|   |      Declare how objects can be initialized.\n|   |\n|   \\-- Member Function Prototypes\n|          Declare the behaviors available to objects.\n|\n\\-- Implementation File (.cpp)\n    |\n    |-- Constructor Definitions\n    |      Define how objects are initialized.\n    |\n    \\-- Member Function Definitions\n           Define how the class behaviors are performed.\n\nThe class name defines the new data type. Objects created from the class are individual instances of that type.\n\nInstance variables hold the data that belongs to each object. Each object has its own values for these variables.\n\nMember functions operate on the object's data and describe what the object can do. Constructors are special member functions that help establish the object's initial state.\n\nAccess specifiers such as public and private control how the members of the class can be accessed. Instance variables are commonly placed in the private section, while constructors and other member functions that need to be used outside the class are commonly placed in the public section.\n\nTogether, these components allow a class to combine data, behavior, and access control into a single user-defined type.\n\nSeparating the specification from the implementation supports abstraction. The specification file describes what the class contains and what operations are available, while the implementation file contains the details of how those operations are performed. A programmer using the class does not need to know the implementation details in order to use it.",
-        "syntax": "There is no syntax to show for Class Components",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Classes and Objects",
             "Defining Classes",
-            "Class Name",
             "Access Specifiers",
-            "Public",
-            "Private",
             "Instance Variables",
             "Constructors",
             "Member Functions",
@@ -6122,6 +6250,7 @@
             "Create an object",
             "Creating objects",
             "Declare object",
+            "Declare and initializing objects",
             "Declare an object",
             "Object declaration",
             "Initialize object",
@@ -6167,10 +6296,6 @@
             "Creating objects"
         ],
         "description": "A constructor is a special member function that is automatically called when an object of a class is created. Its primary purpose is to initialize the object and establish its initial state.\n\nA constructor has the same name as the class and does not have a return type, not even void. Because constructors are member functions, their prototypes are placed in the class definition in the specification file (.hpp or .h), while their definitions are placed in the implementation file (.cpp).\n\nWhen an object is declared, the appropriate constructor is automatically called. The programmer does not call the constructor like a normal member function after creating the object. Object creation and constructor execution are part of the same process.\n\nA class can have more than one constructor. Constructors can be overloaded by providing different parameter lists, allowing objects of the same class to be initialized in different ways.\n\nA constructor that can be called without arguments is called a default constructor. A constructor that accepts values through parameters can be used to initialize an object's instance variables with values supplied when the object is created.\n\nFor example, a Student class might provide a default constructor that initializes a student with default values and another constructor that accepts a name, student ID, and grade. See Default Constructors and Parameterized Constructors.\n\nConstructors help ensure that an object begins in a known and valid state instead of leaving its instance variables without appropriate initial values.",
-        "syntax": "There is no syntax to show for Constructors",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Classes and Objects",
             "Class Components",
@@ -6375,7 +6500,6 @@
         "topic": "Access Modifiers",
         "keywords": [
             "Access modifier",
-            "Access modifiers",
             "Access specifier",
             "Access specifiers",
             "Public",
@@ -6385,14 +6509,9 @@
             "Private access",
             "Protected access",
             "Class access",
-            "Member access",
             "Data access"
         ],
         "description": "Access modifiers control where the members of a class can be accessed. They are used to control access to instance variables, constructors, and member functions.\n\nThe three access modifiers in C++ are public, private, and protected. In this class we will only discuss public and private.\n\nPublic members can be accessed from outside the class through an object. Constructors and member functions that form the public interface of a class are commonly placed in the public section.\n\nPrivate members can only be accessed directly by member functions of the class and other specially permitted functions or classes. Instance variables are commonly placed in the private section so that outside code cannot directly modify the object's internal data.\n\nAccess modifiers are an important part of encapsulation and data hiding. By keeping instance variables private and providing public member functions to interact with them, a class can control how its data is accessed and modified.\n\nFor example, rather than making a grade instance variable public, the class can keep it private and provide public getGrade() and setGrade() member functions. The setter can then validate a new grade before changing the private instance variable.\n\nIn a C++ class, members are private by default if no access modifier is specified. However, explicitly writing public and private makes the organization and intended access of the class clearer.",
-        "syntax": "There is no syntax to show for access modifiers",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Classes and Objects",
             "Class Components",
@@ -6417,10 +6536,6 @@
             "Public interface"
         ],
         "description": "Encapsulation and abstraction are two important concepts used when designing classes. They help organize a class and control how other parts of a program interact with it.\n\nEncapsulation is the idea of grouping related data and the functions that operate on that data together within a class. The class becomes a single unit that represents both the data associated with an object and the behaviors that operate on that data.\n\nEncapsulation also allows access to the internal data of an object to be controlled. Instance variables are commonly kept private, while public member functions provide the operations that other parts of the program are allowed to perform.\n\nAbstraction is the idea of separating what something does from the details of how it does it. A programmer using an object only needs to know what public operations the class provides. The programmer does not need to know all of the details of how those operations are implemented.\n\nThe separation of a class into specification and implementation files helps demonstrate abstraction. The specification file (.hpp or .h) describes the class and the operations that are available, while the implementation file (.cpp) contains the details of how those operations are performed.\n\nFor example, a Student class might provide a public setGrade() member function. Code using a Student object only needs to know that setGrade() can be used to change the grade. The details of validating and storing the grade are handled by the class.\n\nThe concepts can be summarized as:\n\nEncapsulation\n├── Groups related data and functions together\n├── Keeps the parts of an object organized\n├── Commonly keeps instance variables private\n└── Provides public functions for interacting with the object\n\nAbstraction\n├── Focuses on what an object can do\n├── Hides unnecessary implementation details\n├── Specification file describes what is available\n└── Implementation file describes how it works",
-        "syntax": "There is no syntax to show for Encapsulation and Abstraction",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Classes and Objects",
             "Class Components",
@@ -6478,6 +6593,37 @@
         ]
     },
     {
+        "topic": "Declaring and Initializing Objects",
+        "keywords": [
+            "Declaring objects",
+            "Declaring an object",
+            "Declare object",
+            "Declare an object",
+            "Initializing objects",
+            "Initializing an object",
+            "Initialize object",
+            "Initialize an object",
+            "Declaring and initializing objects",
+            "Object declaration",
+            "Object initialization"
+        ],
+        "description": "Once a class has been defined, variables of that class type can be declared. A variable created from a class is called an object, or an instance of the class.\n\nAn object is declared by specifying the class name followed by the object name, similar to declaring a variable using a built-in data type.\n\nWhen an object is created, a constructor is automatically called to initialize the object. If the object is declared without arguments, a default constructor is used. If values are provided when the object is declared, a matching parameterized constructor can be used to initialize the object.\n\nMultiple objects can be created from the same class. Each object has its own copy of the class's non-static member variables.",
+        "syntax": "ClassName objectName;\n\nClassName objectName(arguments);",
+        "examples": [
+            "Declare a Student object using the default constructor:\nStudent student1;",
+            "Declare and initialize a Student object using a parameterized constructor:\nStudent student2(\"Alex\", 12345, 3.75);",
+            "Declare multiple objects of the same class:\nStudent student1;\nStudent student2;\nStudent student3;"
+        ],
+        "relatedTopics": [
+            "Classes and Objects",
+            "Defining a Class",
+            "Constructors",
+            "Default Constructor",
+            "Parameterized Constructor",
+            "Member Variables"
+        ]
+    },
+    {
         "topic": "Namespaces",
         "keywords": [
             "Namespace",
@@ -6491,10 +6637,6 @@
             "Organizing code"
         ],
         "description": "A namespace is a named scope used to organize related identifiers and help prevent naming conflicts in a program. Variables, functions, classes, and other identifiers can be placed inside a namespace.\n\nAs programs become larger or use multiple libraries, it is possible for different parts of a program to use the same identifier. Without namespaces, these duplicate names could cause conflicts because the compiler would not know which identifier is intended.\n\nNamespaces solve this problem by placing identifiers into separate named scopes. Two namespaces can therefore contain identifiers with the same name because each identifier belongs to a different namespace.\n\nFor example, a Geometry namespace and a Statistics namespace could both contain a function named calculate(). The namespace identifies which calculate() function should be used, allowing both functions to exist in the same program without a naming conflict.\n\nNamespaces also help organize related parts of a program. A Geometry namespace might contain functions and constants related to geometric calculations, while a Statistics namespace might contain functions related to statistical calculations.\n\nThe C++ Standard Library uses a namespace named std. Many identifiers that have been used throughout this course, including cout, cin, string, and vector, belong to the std namespace.\n\nNamespaces can be visualized as:\n\nProgram\n|\n|-- Geometry Namespace\n|   |-- area()\n|   |-- perimeter()\n|   \\-- PI\n|\n\\-- Statistics Namespace\n    |-- mean()\n    |-- median()\n    \\-- mode()\n\nA namespace does not create an object or a new data type. Instead, it creates a named scope that groups identifiers and distinguishes them from identifiers with the same name in other scopes.",
-        "syntax": "There is no syntax to show for namespaces",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Defining Namespaces",
             "Accessing Namespace Members",
@@ -6556,6 +6698,7 @@
             "Namespace variable",
             "Namespace constant",
             "Qualified name",
+            "Qualified names",
             "Fully qualified name",
             "Scope resolution operator",
             "::"
@@ -6684,10 +6827,6 @@
             "Recursion concept"
         ],
         "description": "Recursion is a problem-solving technique in which a problem is solved by repeatedly reducing it to smaller versions of the same problem.\n\nIn programming, recursion is commonly implemented using a function that calls itself. Each call works on a smaller or simpler version of the original problem until a condition is reached that can be solved without making another recursive call.\n\nA recursive solution must eventually reach a stopping condition. Without a stopping condition, the recursive process would continue making additional function calls.\n\nRecursion can be visualized as:\n\nOriginal Problem\n       ↓\nSmaller Problem\n       ↓\nSmaller Problem\n       ↓\nStopping Condition\n       ↓\nResults Return\n\nRecursion is another way of performing repetition. Loops repeat statements within the same function, while recursion performs repetition through repeated function calls.\n\nSome problems can be solved using either iteration or recursion. Recursion is especially useful when a problem can naturally be described in terms of smaller versions of itself.",
-        "syntax": "There is no syntax to show for recursion",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Recursive Functions",
             "Base Case and Recursive Case",
@@ -6727,8 +6866,7 @@
             "Function Calls",
             "Parameters",
             "Local Variables",
-            "Return Values",
-            "Stack Overflow"
+            "Return Values"
         ]
     },
     {
@@ -6758,8 +6896,7 @@
             "Recursion vs Iteration",
             "Function Calls",
             "Parameters",
-            "Return Values",
-            "Stack Overflow"
+            "Return Values"
         ]
     },
     {
@@ -6794,8 +6931,7 @@
             "Parameters",
             "Local Variables",
             "Return Values",
-            "Call Stack",
-            "Stack Overflow"
+            "Call Stack"
         ]
     },
     {
@@ -6816,10 +6952,6 @@
             "Loops versus recursion"
         ],
         "description": "Recursion and iteration are two approaches that can be used to perform repetition and solve problems that involve repeating a process.\n\nIteration performs repetition using a loop, such as a while, do-while, or for loop. The statements in the loop repeat until the loop's condition causes the repetition to stop.\n\nRecursion performs repetition through repeated function calls. A recursive function calls itself with a smaller or simpler version of the problem until a base case is reached.\n\nMany problems can be solved using either iteration or recursion. For example, counting down from a number can be performed with a loop or with a recursive function. The two approaches produce the same result but perform the repetition differently.\n\nIteration usually uses less memory because it does not require a new function call for each repetition. Recursive calls are stored on the call stack until they can finish, so recursion generally requires additional memory for the function calls.\n\nIteration is often a simpler choice for problems that naturally involve straightforward repetition. Recursion can be easier to understand for problems that can naturally be divided into smaller versions of the same problem.\n\nNeither approach is always better. The appropriate choice depends on the problem, the clarity of the solution, and the resources required by each approach.\n\nThe two approaches can be summarized as:\n\nIteration\n├── Repeats using loops\n├── Stops when the loop condition ends the repetition\n├── Does not create a new function call for each repetition\n└── Often appropriate for straightforward repetition\n\nRecursion\n├── Repeats using function calls\n├── Stops when the base case is reached\n├── Adds function calls to the call stack\n└── Often appropriate when a problem can be divided into smaller versions of itself",
-        "syntax": "There is no syntax to show for recursion vs iteration",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Recursion",
             "Recursive Functions",
@@ -6829,8 +6961,7 @@
             "While Loops",
             "For Loops",
             "Function Calls",
-            "Call Stack",
-            "Stack Overflow"
+            "Call Stack"
         ]
     },
     {
@@ -6849,10 +6980,6 @@
             "Enumerators"
         ],
         "description": "An enumeration is a user-defined data type that represents a fixed set of named values. The individual named values within an enumeration are called enumerators.\n\nEnumerators act as named constants because each enumerator represents a fixed value that cannot be changed while the program is running. Since enumerators are constants, this course uses the SCREAMING_SNAKE_CASE naming convention for their names. In SCREAMING_SNAKE_CASE,letters are uppercase and multiple words are separated with underscores, such as MONDAY, IN_PROGRESS, and FILE_NOT_FOUND.\n\nEnumerations are useful when a variable should contain one value from a small, predefined set of choices. Instead of using numbers or other values whose meaning may not be obvious, an enumeration allows meaningful names to be used.\n\nFor example, a program that represents the days of the week could use an enumeration containing values such as MONDAY, TUESDAY, and WEDNESDAY rather than using numbers to represent each day.\n\nUsing named values can make a program easier to read and understand because the meaning of the value is shown directly in the code.\n\nAn enumeration defines a new data type. After the enumeration has been defined, variables of that type can be declared and assigned one of the enumerators defined for the type.\n\nAn enumeration can be visualized as:\n\nDay\n├── MONDAY\n├── TUESDAY\n├── WEDNESDAY\n├── THURSDAY\n├── FRIDAY\n├── SATURDAY\n└── SUNDAY\n\nEnumerations are especially useful for representing categories, states, options, or other values that come from a known set of choices.",
-        "syntax": "There is no syntax to show for enumerations",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Defining Enumerations",
             "Declaring and Initializing Enumeration Variables",
@@ -6894,8 +7021,7 @@
             "Enumerators",
             "User-Defined Data Types",
             "Data Types",
-            "Constants",
-            "Integer Values"
+            "Constants"
         ]
     },
     {
@@ -6948,10 +7074,6 @@
             "Radix"
         ],
         "description": "A numbering system is a method for representing numeric values using a set of symbols called digits. Different numbering systems use different numbers of digits and different place values.\n\nThe base, also called the radix, of a numbering system indicates how many different digits are available in that system. The base also determines the place values used to interpret a number.\n\nThe four numbering systems commonly encountered in computing are binary, octal, decimal, and hexadecimal.\n\nBinary is a base-2 numbering system and uses the digits 0 and 1. Binary is important in computing because computers represent and process data using two states.\n\nOctal is a base-8 numbering system and uses the digits 0 through 7. Each octal digit can represent a group of three binary digits.\n\nDecimal is a base-10 numbering system and uses the digits 0 through 9. Decimal is the numbering system most commonly used for everyday calculations.\n\nHexadecimal is a base-16 numbering system and uses the digits 0 through 9 and the letters A through F. The letters A through F represent the values 10 through 15. Each hexadecimal digit can represent a group of four binary digits.\n\nThe same numeric value can be represented in different numbering systems. For example:\nBinary\t\t1010\nOctal\t\t    12\nDecimal\t\t    10\nHexidecimal\t     A",
-        "syntax": "There is no syntax to show for Numbering Systems",
-        "examples": [
-            "There are no examples for this topic."
-        ],
         "relatedTopics": [
             "Positional Notation",
             "Binary",
@@ -6990,7 +7112,6 @@
             "Octal",
             "Decimal",
             "Hexadecimal",
-            "Exponents",
             "Converting Between Decimal and Other Bases"
         ]
     },
@@ -7023,7 +7144,6 @@
             "Octal",
             "Decimal",
             "Hexadecimal",
-            "Bits and Bytes",
             "Converting Between Decimal and Other Bases",
             "Converting Between Binary, Octal, and Hexadecimal"
         ]
@@ -7117,7 +7237,6 @@
             "Binary",
             "Octal",
             "Decimal",
-            "Bits and Bytes",
             "Converting Between Decimal and Other Bases",
             "Converting Between Binary, Octal, and Hexadecimal"
         ]
@@ -7143,7 +7262,6 @@
             "Base conversion"
         ],
         "description": "Numbers can be converted between decimal and other numbering systems without changing the numeric value being represented.\n\nTo convert a decimal whole number to another base, the repeated division method can be used. Divide the decimal number by the base of the destination numbering system and record the remainder. Continue dividing each quotient by the base until the quotient becomes 0. The remainders are then read from bottom to top to form the converted number.\n\nThe divisor is determined by the destination base:\n\nDecimal → Binary       Divide by 2\nDecimal → Octal        Divide by 8\nDecimal → Hexadecimal  Divide by 16\n\nWhen converting to hexadecimal, remainders from 10 through 15 are represented by the hexadecimal digits A through F.\n\nTo convert a number from binary, octal, or hexadecimal to decimal, positional notation can be used. Multiply each digit by its corresponding power of the number's base and add the results.\n\nThe base used for positional notation depends on the original numbering system:\n\nBinary → Decimal       Powers of 2\nOctal → Decimal        Powers of 8\nHexadecimal → Decimal  Powers of 16",
-        "syntax": "There is no syntax to show for Converting Between Decimal and Other Bases",
         "examples": [
             "Convert decimal 25 to binary using repeated division:\n\n25 ÷ 2 = 12 remainder 1\n12 ÷ 2 =  6 remainder 0\n 6 ÷ 2 =  3 remainder 0\n 3 ÷ 2 =  1 remainder 1\n 1 ÷ 2 =  0 remainder 1\n\nRead the remainders from bottom to top:\n\n11001\n\n25₁₀ = 11001₂",
             "Convert decimal 83 to octal using repeated division:\n\n83 ÷ 8 = 10 remainder 3\n10 ÷ 8 =  1 remainder 2\n 1 ÷ 8 =  0 remainder 1\n\nRead the remainders from bottom to top:\n\n123\n\n83₁₀ = 123₈",
@@ -7184,7 +7302,6 @@
             "Groups of 4 bits"
         ],
         "description": "Binary can be converted directly to and from octal or hexadecimal by grouping binary digits. These conversions are convenient because the bases are related by powers of 2.\n\nOne octal digit corresponds to exactly three binary digits because 8 = 2³. Therefore, binary and octal conversions use groups of three bits.\n\nOne hexadecimal digit corresponds to exactly four binary digits because 16 = 2⁴. Therefore, binary and hexadecimal conversions use groups of four bits.\n\nWhen converting binary to octal or hexadecimal, begin at the right side of the binary number and separate the bits into groups of three for octal or four for hexadecimal. If the leftmost group does not contain enough bits, leading zeros can be added to complete the group.\n\nWhen converting octal or hexadecimal to binary, replace each digit with its corresponding 3-bit or 4-bit binary representation.\n\nOctal and hexadecimal do not have the same direct grouping relationship with each other. A convenient way to convert between them is to use binary as an intermediate representation.",
-        "syntax": "There is no syntax to show for Converting Between Binary, Octal, and Hexadecimal",
         "examples": [
             "Binary and octal equivalents:\n\nBinary   Octal\n000   →    0\n001   →    1\n010   →    2\n011   →    3\n100   →    4\n101   →    5\n110   →    6\n111   →    7",
             "Convert binary 110101011 to octal by grouping the bits into groups of three:\n\n110 101 011\n ↓   ↓   ↓\n 6   5   3\n\n110101011₂ = 653₈",
@@ -7201,7 +7318,6 @@
             "Octal",
             "Hexadecimal",
             "Positional Notation",
-            "Bits and Bytes",
             "Converting Between Decimal and Other Bases"
         ]
     }
