@@ -5,7 +5,7 @@
 // Get page elements
 const questionBox = document.getElementById("question");
 const askButton = document.getElementById("askButton");
-const chatBox = document.getElementById("chatBox");
+const chatBox = document.getElementById("conversation");
 
 
 // ------------------------------------------------------------
